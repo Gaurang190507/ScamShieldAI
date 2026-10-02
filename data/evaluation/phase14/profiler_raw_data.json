@@ -1,0 +1,133 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.13.6",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "cpu_count_logical": 4,
+    "total_ram_gb": 7.65,
+    "timestamp_utc": "2026-10-02T17:33:33.111900+00:00"
+  },
+  "model_loading": {
+    "initial_rss_mb": 163.19,
+    "loading_latencies_ms": {
+      "baseline_tfidf_lr": 19.5,
+      "char_ngram_model_b": 48.0,
+      "knowledge_retriever": 50.95,
+      "semantic_reference_index": 52.11,
+      "sentence_transformer_minilm": 10871.16
+    },
+    "rss_increments_mb": {
+      "baseline_tfidf_lr": 2.32,
+      "char_ngram_model_b": 3.01,
+      "knowledge_retriever": 0.18,
+      "semantic_reference_index": 8.59,
+      "sentence_transformer_minilm": 371.73
+    },
+    "final_rss_mb": 549.03
+  },
+  "pipeline_stages": {
+    "url_analysis": {
+      "mean_ms": 1.1,
+      "median_ms": 0.89,
+      "min_ms": 0.69,
+      "max_ms": 3.72,
+      "p95_ms": 1.66
+    },
+    "tactic_detection": {
+      "mean_ms": 0.64,
+      "median_ms": 0.5,
+      "min_ms": 0.35,
+      "max_ms": 1.37,
+      "p95_ms": 1.27
+    },
+    "baseline_classifier": {
+      "mean_ms": 1.23,
+      "median_ms": 1.02,
+      "min_ms": 0.64,
+      "max_ms": 2.56,
+      "p95_ms": 2.18
+    },
+    "char_ngram_classifier": {
+      "mean_ms": 1.27,
+      "median_ms": 1.0,
+      "min_ms": 0.7,
+      "max_ms": 2.66,
+      "p95_ms": 2.43
+    },
+    "sentence_embedding": {
+      "mean_ms": 33.26,
+      "median_ms": 29.24,
+      "min_ms": 16.89,
+      "max_ms": 105.56,
+      "p95_ms": 52.71
+    },
+    "reference_similarity_search": {
+      "mean_ms": 0.58,
+      "median_ms": 0.55,
+      "min_ms": 0.45,
+      "max_ms": 1.08,
+      "p95_ms": 0.78
+    },
+    "rag_retrieval": {
+      "mean_ms": 1.84,
+      "median_ms": 1.61,
+      "min_ms": 1.07,
+      "max_ms": 3.29,
+      "p95_ms": 2.95
+    },
+    "ocr_native_available": false,
+    "ocr_engine_type": "fixture_engine"
+  },
+  "end_to_end_workloads": {
+    "workload_1_benign_text": {
+      "verdict": "likely_non_scam",
+      "evidence_count": 3,
+      "cold_latency_ms": 37.78,
+      "warm_mean_ms": 29.84,
+      "warm_median_ms": 25.53,
+      "warm_min_ms": 21.35,
+      "warm_max_ms": 100.05,
+      "warm_p95_ms": 38.99
+    },
+    "workload_2_bank_phishing_sms": {
+      "verdict": "likely_scam",
+      "evidence_count": 10,
+      "cold_latency_ms": 30.95,
+      "warm_mean_ms": 32.28,
+      "warm_median_ms": 27.79,
+      "warm_min_ms": 23.85,
+      "warm_max_ms": 102.22,
+      "warm_p95_ms": 40.83
+    },
+    "workload_3_url_only": {
+      "verdict": "mixed_signals",
+      "evidence_count": 9,
+      "cold_latency_ms": 26.52,
+      "warm_mean_ms": 31.95,
+      "warm_median_ms": 27.45,
+      "warm_min_ms": 24.02,
+      "warm_max_ms": 103.99,
+      "warm_p95_ms": 37.95
+    },
+    "workload_4_obfuscated_hinglish": {
+      "verdict": "mixed_signals",
+      "evidence_count": 3,
+      "cold_latency_ms": 30.44,
+      "warm_mean_ms": 33.32,
+      "warm_median_ms": 28.71,
+      "warm_min_ms": 26.23,
+      "warm_max_ms": 102.38,
+      "warm_p95_ms": 40.33
+    },
+    "workload_5_screenshot_image": {
+      "verdict": "insufficient_evidence",
+      "evidence_count": 3,
+      "cold_latency_ms": 72.22,
+      "warm_mean_ms": 59.99,
+      "warm_median_ms": 58.3,
+      "warm_min_ms": 42.4,
+      "warm_max_ms": 90.71,
+      "warm_p95_ms": 74.28
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "total_messages": 5574,
+  "messages_with_urls": 108,
+  "url_message_percentage": 1.94,
+  "total_url_mentions": 108,
+  "unique_urls_count": 67,
+  "malformed_urls_count": 8,
+  "schemes_distribution": {
+    "no_scheme": 86,
+    "http": 14
+  },
+  "host_properties": {
+    "ip_based_hostnames": 0,
+    "punycode_hostnames": 0,
+    "non_ascii_hostnames": 0,
+    "known_shorteners": 0,
+    "excessive_subdomain_depth": 0
+  },
+  "port_properties": {
+    "unusual_ports": 0
+  },
+  "authority_properties": {
+    "userinfo_present": 0
+  },
+  "length_properties": {
+    "mean_url_length": 19.45,
+    "median_url_length": 18.0,
+    "max_url_length": 41,
+    "min_url_length": 11
+  },
+  "top_path_keywords": {},
+  "top_query_parameters": {}
+}

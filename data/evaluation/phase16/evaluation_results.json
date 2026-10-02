@@ -1,0 +1,3953 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-02T18:56:30Z",
+    "sample_count": 90,
+    "init_time_ms": 239.8782999953255,
+    "warmup_timings": {
+      "baseline_classifier_ms": 31.877799949143082,
+      "embedder_ms": 19403.897100011818,
+      "semantic_reference_ms": 48.13579999608919,
+      "knowledge_retriever_ms": 0.4194999928586185,
+      "total_warmup_ms": 19484.340099967085
+    }
+  },
+  "metrics": {
+    "sample_counts": {
+      "total": 90,
+      "scam": 61,
+      "non_scam": 29
+    },
+    "classification": {
+      "tp": 16,
+      "fp": 3,
+      "tn": 26,
+      "fn": 45,
+      "accuracy": 0.4666666666666667,
+      "precision": 0.8421052631578947,
+      "recall": 0.26229508196721313,
+      "f1": 0.4,
+      "fpr": 0.10344827586206896,
+      "fnr": 0.7377049180327869
+    },
+    "hard_negative_fpr": {
+      "total_hard_negatives": 15,
+      "fp_count": 1,
+      "mixed_count": 7,
+      "tn_count": 7,
+      "fpr": 0.06666666666666667
+    },
+    "status_distribution": {
+      "likely_scam": {
+        "total": 19,
+        "scam": 16,
+        "non_scam": 3
+      },
+      "mixed_signals": {
+        "total": 45,
+        "scam": 35,
+        "non_scam": 10
+      },
+      "likely_non_scam": {
+        "total": 26,
+        "scam": 10,
+        "non_scam": 16
+      }
+    },
+    "subgroups": {
+      "lang_en": {
+        "count": 78,
+        "scam_count": 54,
+        "non_scam_count": 24,
+        "tp": 15,
+        "fp": 3,
+        "tn": 21,
+        "fn": 39,
+        "accuracy": 0.46153846153846156,
+        "precision": 0.8333333333333334,
+        "recall": 0.2777777777777778,
+        "f1": 0.4166666666666667
+      },
+      "lang_hi": {
+        "count": 4,
+        "scam_count": 2,
+        "non_scam_count": 2,
+        "tp": 0,
+        "fp": 0,
+        "tn": 2,
+        "fn": 2,
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "lang_hinglish": {
+        "count": 5,
+        "scam_count": 3,
+        "non_scam_count": 2,
+        "tp": 1,
+        "fp": 0,
+        "tn": 2,
+        "fn": 2,
+        "accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      "lang_mixed": {
+        "count": 3,
+        "scam_count": 2,
+        "non_scam_count": 1,
+        "tp": 0,
+        "fp": 0,
+        "tn": 1,
+        "fn": 2,
+        "accuracy": 0.3333333333333333,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "C1_common_scams": {
+        "count": 20,
+        "scam_count": 20,
+        "non_scam_count": 0,
+        "tp": 9,
+        "fp": 0,
+        "tn": 0,
+        "fn": 11,
+        "recall": 0.45,
+        "accuracy": 0.45
+      },
+      "C2_unknown_emerging": {
+        "count": 10,
+        "scam_count": 10,
+        "non_scam_count": 0,
+        "tp": 1,
+        "fp": 0,
+        "tn": 0,
+        "fn": 9,
+        "recall": 0.1,
+        "accuracy": 0.1
+      },
+      "C3_hard_negatives": {
+        "count": 15,
+        "scam_count": 0,
+        "non_scam_count": 15,
+        "tp": 0,
+        "fp": 1,
+        "tn": 14,
+        "fn": 0,
+        "recall": 0.0,
+        "accuracy": 0.9333333333333333
+      },
+      "C4_multilingual": {
+        "count": 12,
+        "scam_count": 7,
+        "non_scam_count": 5,
+        "tp": 1,
+        "fp": 0,
+        "tn": 5,
+        "fn": 6,
+        "recall": 0.14285714285714285,
+        "accuracy": 0.5
+      },
+      "C5_obfuscated": {
+        "count": 10,
+        "scam_count": 8,
+        "non_scam_count": 2,
+        "tp": 3,
+        "fp": 0,
+        "tn": 2,
+        "fn": 5,
+        "recall": 0.375,
+        "accuracy": 0.5
+      },
+      "C6_url_cases": {
+        "count": 10,
+        "scam_count": 6,
+        "non_scam_count": 4,
+        "tp": 1,
+        "fp": 2,
+        "tn": 2,
+        "fn": 5,
+        "recall": 0.16666666666666666,
+        "accuracy": 0.3
+      },
+      "C7_screenshot_cases": {
+        "count": 8,
+        "scam_count": 5,
+        "non_scam_count": 3,
+        "tp": 1,
+        "fp": 0,
+        "tn": 3,
+        "fn": 4,
+        "recall": 0.2,
+        "accuracy": 0.5
+      },
+      "C8_adversarial_injection": {
+        "count": 5,
+        "scam_count": 5,
+        "non_scam_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 0,
+        "fn": 5,
+        "recall": 0.0,
+        "accuracy": 0.0
+      }
+    },
+    "tactic_metrics": {
+      "micro_precision": 0.13978494623655913,
+      "micro_recall": 0.08074534161490683,
+      "micro_f1": 0.10236220472440946,
+      "exact_set_match_rate": 0.17777777777777778,
+      "per_tactic": {
+        "link_redirection": {
+          "tp": 0,
+          "fp": 32,
+          "fn": 0
+        },
+        "urgency": {
+          "tp": 13,
+          "fp": 1,
+          "fn": 21
+        },
+        "impersonation": {
+          "tp": 0,
+          "fp": 29,
+          "fn": 0
+        },
+        "action_demand": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 28
+        },
+        "authority_impersonation": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 39
+        },
+        "payment_request": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0
+        },
+        "payment_demand": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 20
+        },
+        "job_offer": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "reward_promise": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 18
+        },
+        "trust_building": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "legal_threat": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6
+        },
+        "refund_claim": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "verification_request": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "account_suspension": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "threat": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "remote_access_request": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "credential_request": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "emotional_manipulation": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "fear_creation": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "isolation_tactic": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "novelty_lure": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "adversarial_override": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5
+        }
+      }
+    },
+    "ocr_metrics": {
+      "total_screenshots": 8,
+      "ocr_success_count": 0,
+      "ocr_success_rate": 0.0
+    },
+    "unknown_threat": {
+      "c2_count": 10,
+      "tp_likely_scam": 1,
+      "mixed_signals": 5,
+      "strict_recall": 0.1,
+      "flagged_rate": 0.6
+    },
+    "security_containment": {
+      "c8_count": 5,
+      "contained_count": 2,
+      "containment_rate": 0.4
+    },
+    "performance": {
+      "init_time_ms": 239.8782999953255,
+      "first_investigation_ms": 166.30059998715296,
+      "mean_latency_ms": 90.38538333261386,
+      "p50_latency_ms": 64.48489998001605,
+      "p95_latency_ms": 225.5936000146903,
+      "warmup_timings_ms": {
+        "baseline_classifier_ms": 31.877799949143082,
+        "embedder_ms": 19403.897100011818,
+        "semantic_reference_ms": 48.13579999608919,
+        "knowledge_retriever_ms": 0.4194999928586185,
+        "total_warmup_ms": 19484.340099967085
+      }
+    }
+  },
+  "records": [
+    {
+      "sample_id": "P16-C01-001",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "HDFC Bank",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection",
+        "urgency"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5532,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 166.30059998715296,
+      "timings_ms": {
+        "validation_ms": 0.2454999485053122,
+        "pipeline_ms": 159.8185999901034,
+        "explanation_ms": 5.004000035114586,
+        "total_ms": 165.94130004523322
+      }
+    },
+    {
+      "sample_id": "P16-C01-002",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "electricity_bill",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "State Electricity Board",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "payment_request",
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.65,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 49.041699967347085,
+      "timings_ms": {
+        "validation_ms": 0.14159997226670384,
+        "pipeline_ms": 46.70270002679899,
+        "explanation_ms": 1.7735000001266599,
+        "total_ms": 48.830100044142455
+      }
+    },
+    {
+      "sample_id": "P16-C01-003",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "parcel_delivery",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand",
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "India Post",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection",
+        "payment_request"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5636,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 54.37239998718724,
+      "timings_ms": {
+        "validation_ms": 0.11409999569877982,
+        "pipeline_ms": 51.7583999899216,
+        "explanation_ms": 2.0786999957636,
+        "total_ms": 54.13230002159253
+      }
+    },
+    {
+      "sample_id": "P16-C01-004",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "job_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "trust_building"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "reply_sms",
+      "impersonated_entity": "Global Marketing Agency",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "job_offer"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5774,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 217.32739999424666,
+      "timings_ms": {
+        "validation_ms": 0.09169999975711107,
+        "pipeline_ms": 214.59599997615442,
+        "explanation_ms": 2.2612999891862273,
+        "total_ms": 217.1049999888055
+      }
+    },
+    {
+      "sample_id": "P16-C01-005",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "State Bank of India",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection",
+        "urgency"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5725,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 56.63319997256622,
+      "timings_ms": {
+        "validation_ms": 0.09099999442696571,
+        "pipeline_ms": 52.49069997807965,
+        "explanation_ms": 3.6573000252246857,
+        "total_ms": 56.403799972031265
+      }
+    },
+    {
+      "sample_id": "P16-C01-006",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "e_challan",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "legal_threat",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand",
+        "urgency"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Traffic Police / MoRTH",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5332,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 55.75769999995828,
+      "timings_ms": {
+        "validation_ms": 0.1191999763250351,
+        "pipeline_ms": 52.55280004348606,
+        "explanation_ms": 2.597799990326166,
+        "total_ms": 55.47529994510114
+      }
+    },
+    {
+      "sample_id": "P16-C01-007",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "refund_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation",
+        "reward_promise"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "PhonePe",
+      "urgency_level": "medium",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "link_redirection",
+        "refund_claim",
+        "urgency"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4411,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 52.16570000629872,
+      "timings_ms": {
+        "validation_ms": 0.10659999679774046,
+        "pipeline_ms": 48.853599990252405,
+        "explanation_ms": 2.7103000320494175,
+        "total_ms": 51.89150001388043
+      }
+    },
+    {
+      "sample_id": "P16-C01-008",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "loan_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "transfer_money",
+      "impersonated_entity": "Instant Cash NBFC",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "payment_request",
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5112,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 79.26520000910386,
+      "timings_ms": {
+        "validation_ms": 0.11229998199269176,
+        "pipeline_ms": 69.2198000033386,
+        "explanation_ms": 9.443999966606498,
+        "total_ms": 78.98529997328296
+      }
+    },
+    {
+      "sample_id": "P16-C01-009",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "government_impersonation",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation",
+        "reward_promise"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Income Tax Department",
+      "urgency_level": "medium",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection",
+        "refund_claim",
+        "verification_request"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6069,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 53.806499985512346,
+      "timings_ms": {
+        "validation_ms": 0.42999995639547706,
+        "pipeline_ms": 50.34239997621626,
+        "explanation_ms": 2.5410999660380185,
+        "total_ms": 53.55090001830831
+      }
+    },
+    {
+      "sample_id": "P16-C01-010",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "telecom_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "legal_threat",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "urgency"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "TRAI / DoT",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "high",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [
+        "account_suspension",
+        "impersonation",
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5117,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 77.9431999544613,
+      "timings_ms": {
+        "validation_ms": 0.10659999679774046,
+        "pipeline_ms": 67.90060002822429,
+        "explanation_ms": 9.198700019624084,
+        "total_ms": 77.40549999289215
+      }
+    },
+    {
+      "sample_id": "P16-C01-011",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "lottery_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "trust_building"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "send_documents",
+      "impersonated_entity": "KBC / Sony Entertainment",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.3953,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 52.20450001070276,
+      "timings_ms": {
+        "validation_ms": 0.10629999451339245,
+        "pipeline_ms": 48.746999993454665,
+        "explanation_ms": 2.6260000304318964,
+        "total_ms": 51.877500023692846
+      }
+    },
+    {
+      "sample_id": "P16-C01-012",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "police_threat",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "legal_threat",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "urgency"
+      ],
+      "requested_action": "stay_on_call",
+      "impersonated_entity": "Delhi Cyber Police",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "threat"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6349,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 62.20629997551441,
+      "timings_ms": {
+        "validation_ms": 0.14439999358728528,
+        "pipeline_ms": 56.06089998036623,
+        "explanation_ms": 5.481700005475432,
+        "total_ms": 61.897700012195855
+      }
+    },
+    {
+      "sample_id": "P16-C01-013",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "fake_support",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Amazon India",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5494,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 65.81200001528487,
+      "timings_ms": {
+        "validation_ms": 0.17830001888796687,
+        "pipeline_ms": 59.607999981381,
+        "explanation_ms": 5.4848999716341496,
+        "total_ms": 65.52639999426901
+      }
+    },
+    {
+      "sample_id": "P16-C01-014",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "investment_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "trust_building"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Foreign Investor Anna",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5649,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 58.28140000812709,
+      "timings_ms": {
+        "validation_ms": 0.11909997556358576,
+        "pipeline_ms": 54.785799991805106,
+        "explanation_ms": 2.882200002204627,
+        "total_ms": 57.981899997685105
+      }
+    },
+    {
+      "sample_id": "P16-C01-015",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "technical_support",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Microsoft Support",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6442,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 302.58079996565357,
+      "timings_ms": {
+        "validation_ms": 0.10199996177107096,
+        "pipeline_ms": 298.7415000097826,
+        "explanation_ms": 2.737000002525747,
+        "total_ms": 301.78620002698153
+      }
+    },
+    {
+      "sample_id": "P16-C01-016",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "remote_access",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation",
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "install_app",
+      "impersonated_entity": "Axis Bank",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "high",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [
+        "impersonation",
+        "remote_access_request"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4015,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 225.5936000146903,
+      "timings_ms": {
+        "validation_ms": 0.10000000474974513,
+        "pipeline_ms": 214.85210000537336,
+        "explanation_ms": 9.163600043393672,
+        "total_ms": 224.88209995208308
+      }
+    },
+    {
+      "sample_id": "P16-C01-017",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "reward_points",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "ICICI Bank",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5139,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 123.6538999946788,
+      "timings_ms": {
+        "validation_ms": 0.13970001600682735,
+        "pipeline_ms": 120.24090002523735,
+        "explanation_ms": 2.613099990412593,
+        "total_ms": 123.37250000564381
+      }
+    },
+    {
+      "sample_id": "P16-C01-018",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "qr_code_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "trust_building"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "scan_qr",
+      "impersonated_entity": "OLX Buyer",
+      "urgency_level": "medium",
+      "status": "likely_scam",
+      "evidence_level": "high",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [
+        "credential_request"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4894,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 125.5216000135988,
+      "timings_ms": {
+        "validation_ms": 0.12290000449866056,
+        "pipeline_ms": 115.70119997486472,
+        "explanation_ms": 9.202699991874397,
+        "total_ms": 125.22779998835176
+      }
+    },
+    {
+      "sample_id": "P16-C01-019",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "emergency_impersonation",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "emotional_manipulation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "transfer_money",
+      "impersonated_entity": "Close Friend",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5178,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 91.8128999765031,
+      "timings_ms": {
+        "validation_ms": 0.1080999500118196,
+        "pipeline_ms": 88.30840000882745,
+        "explanation_ms": 2.792000013869256,
+        "total_ms": 91.45580005133525
+      }
+    },
+    {
+      "sample_id": "P16-C01-020",
+      "case_group": "C1_common_scams",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "government_impersonation",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation",
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Indane Gas / MoPNG",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5818,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 98.46680000191554,
+      "timings_ms": {
+        "validation_ms": 0.36120001459494233,
+        "pipeline_ms": 93.50849996553734,
+        "explanation_ms": 3.862400015350431,
+        "total_ms": 98.22139999596402
+      }
+    },
+    {
+      "sample_id": "P16-C02-001",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "digital_arrest",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "legal_threat",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "isolation_tactic"
+      ],
+      "requested_action": "stay_on_call",
+      "impersonated_entity": "Directorate of Enforcement",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "fear_creation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5873,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 81.37989998795092,
+      "timings_ms": {
+        "validation_ms": 0.12159999459981918,
+        "pipeline_ms": 78.70339998044074,
+        "explanation_ms": 2.1229999838396907,
+        "total_ms": 81.12499996786937
+      }
+    },
+    {
+      "sample_id": "P16-C02-002",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "ai_voice_kidnap",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "urgency",
+        "emotional_manipulation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "transfer_money",
+      "impersonated_entity": "Son / Police",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.553,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 126.39170000329614,
+      "timings_ms": {
+        "validation_ms": 0.11379999341443181,
+        "pipeline_ms": 81.41079999040812,
+        "explanation_ms": 44.34720001881942,
+        "total_ms": 126.05899997288361
+      }
+    },
+    {
+      "sample_id": "P16-C02-003",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "novel_esg_investment",
+      "known_unknown_status": "unknown",
+      "primary_tactics": [
+        "reward_promise",
+        "trust_building"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "invest_funds",
+      "impersonated_entity": "Green Hydrogen Syndicate",
+      "urgency_level": "low",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6249,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 160.46660003485158,
+      "timings_ms": {
+        "validation_ms": 0.0950000248849392,
+        "pipeline_ms": 156.08720004092902,
+        "explanation_ms": 3.8295999984256923,
+        "total_ms": 160.21340002771467
+      }
+    },
+    {
+      "sample_id": "P16-C02-004",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "ev_subsidy_fraud",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "authority_impersonation",
+        "reward_promise"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "pay_fee",
+      "impersonated_entity": "Ministry of Heavy Industries",
+      "urgency_level": "medium",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6022,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 60.370300023350865,
+      "timings_ms": {
+        "validation_ms": 0.10770000517368317,
+        "pipeline_ms": 55.77080004150048,
+        "explanation_ms": 3.6513000377453864,
+        "total_ms": 59.95640001492575
+      }
+    },
+    {
+      "sample_id": "P16-C02-005",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "smart_meter_mandate",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "authority_impersonation",
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "pay_fee",
+      "impersonated_entity": "State Power Distribution Co",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6942,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 51.50799994589761,
+      "timings_ms": {
+        "validation_ms": 0.2114999806508422,
+        "pipeline_ms": 47.878599958494306,
+        "explanation_ms": 2.7200999902561307,
+        "total_ms": 51.21430003782734
+      }
+    },
+    {
+      "sample_id": "P16-C02-006",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "app_review_deposit",
+      "known_unknown_status": "unknown",
+      "primary_tactics": [
+        "reward_promise"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "deposit_collateral",
+      "impersonated_entity": "ASO Global Agency",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "payment_request"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5868,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 54.63959998451173,
+      "timings_ms": {
+        "validation_ms": 0.09960000170394778,
+        "pipeline_ms": 51.60899995826185,
+        "explanation_ms": 2.446600003167987,
+        "total_ms": 54.36639999970794
+      }
+    },
+    {
+      "sample_id": "P16-C02-007",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "pf_settlement_audit",
+      "known_unknown_status": "unknown",
+      "primary_tactics": [
+        "authority_impersonation",
+        "legal_threat"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "transfer_money",
+      "impersonated_entity": "Corporate HR / EPFO",
+      "urgency_level": "medium",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6041,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 48.70450001908466,
+      "timings_ms": {
+        "validation_ms": 0.10060000931844115,
+        "pipeline_ms": 46.42750002676621,
+        "explanation_ms": 1.7684000195004046,
+        "total_ms": 48.47490001702681
+      }
+    },
+    {
+      "sample_id": "P16-C02-008",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "clinical_trial_scam",
+      "known_unknown_status": "unknown",
+      "primary_tactics": [
+        "reward_promise"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "pay_fee",
+      "impersonated_entity": "Sleep Science Institute",
+      "urgency_level": "low",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6174,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 64.48489998001605,
+      "timings_ms": {
+        "validation_ms": 0.11370005086064339,
+        "pipeline_ms": 60.891799977980554,
+        "explanation_ms": 2.991399960592389,
+        "total_ms": 64.19469998218119
+      }
+    },
+    {
+      "sample_id": "P16-C02-009",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "web3_drainer",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "reward_promise",
+        "trust_building"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "connect_wallet",
+      "impersonated_entity": "UN Climate Secretariat",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5625,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 66.73580000642687,
+      "timings_ms": {
+        "validation_ms": 0.12059998698532581,
+        "pipeline_ms": 50.84689997602254,
+        "explanation_ms": 15.208899974822998,
+        "total_ms": 66.39029999496415
+      }
+    },
+    {
+      "sample_id": "P16-C02-010",
+      "case_group": "C2_unknown_emerging",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "drone_delivery_beta",
+      "known_unknown_status": "unknown",
+      "primary_tactics": [
+        "reward_promise",
+        "novelty_lure"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "pay_deposit",
+      "impersonated_entity": "AeroExpress Logistics",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6206,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 50.883600022643805,
+      "timings_ms": {
+        "validation_ms": 0.07670000195503235,
+        "pipeline_ms": 48.244599951431155,
+        "explanation_ms": 2.1250999998301268,
+        "total_ms": 50.64100003801286
+      }
+    },
+    {
+      "sample_id": "P16-C03-001",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "HDFC Bank",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5669,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 166.30830004578456,
+      "timings_ms": {
+        "validation_ms": 0.3931999672204256,
+        "pipeline_ms": 151.88019996276125,
+        "explanation_ms": 13.425100012682378,
+        "total_ms": 166.0103999893181
+      }
+    },
+    {
+      "sample_id": "P16-C03-002",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "SBI Card",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5937,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 70.02270000521094,
+      "timings_ms": {
+        "validation_ms": 0.11740002082660794,
+        "pipeline_ms": 66.64279999677092,
+        "explanation_ms": 2.749999985098839,
+        "total_ms": 69.72689996473491
+      }
+    },
+    {
+      "sample_id": "P16-C03-003",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Amazon Logistics",
+      "urgency_level": "low",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5238,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 61.10880000051111,
+      "timings_ms": {
+        "validation_ms": 1.7843000241555274,
+        "pipeline_ms": 56.22189998393878,
+        "explanation_ms": 2.621200052089989,
+        "total_ms": 60.89259998407215
+      }
+    },
+    {
+      "sample_id": "P16-C03-004",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Tata Power",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5115,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 136.26359996851534,
+      "timings_ms": {
+        "validation_ms": 0.10260002454742789,
+        "pipeline_ms": 105.2549000014551,
+        "explanation_ms": 30.368999985512346,
+        "total_ms": 135.92139998218045
+      }
+    },
+    {
+      "sample_id": "P16-C03-005",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Income Tax Department",
+      "urgency_level": "low",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5799,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 97.04180003609508,
+      "timings_ms": {
+        "validation_ms": 0.12440001592040062,
+        "pipeline_ms": 94.36960000311956,
+        "explanation_ms": 1.8992999684996903,
+        "total_ms": 96.69430000940338
+      }
+    },
+    {
+      "sample_id": "P16-C03-006",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "UIDAI",
+      "urgency_level": "medium",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5272,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 88.26869999757037,
+      "timings_ms": {
+        "validation_ms": 0.09350001346319914,
+        "pipeline_ms": 85.14320000540465,
+        "explanation_ms": 2.5741999852471054,
+        "total_ms": 87.99059997545555
+      }
+    },
+    {
+      "sample_id": "P16-C03-007",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "IndiGo Airlines",
+      "urgency_level": "low",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4061,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 62.486499955412,
+      "timings_ms": {
+        "validation_ms": 0.09699998190626502,
+        "pipeline_ms": 59.270699974149466,
+        "explanation_ms": 2.6994000072591007,
+        "total_ms": 62.23229999886826
+      }
+    },
+    {
+      "sample_id": "P16-C03-008",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Apollo Hospitals",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4815,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 66.24290003674105,
+      "timings_ms": {
+        "validation_ms": 0.09950000094249845,
+        "pipeline_ms": 62.888899992685765,
+        "explanation_ms": 2.7938999701291323,
+        "total_ms": 65.96989999525249
+      }
+    },
+    {
+      "sample_id": "P16-C03-009",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Parag Parikh Mutual Fund",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5645,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 66.87270000111312,
+      "timings_ms": {
+        "validation_ms": 0.10230002226307988,
+        "pipeline_ms": 63.63200000487268,
+        "explanation_ms": 2.63290002476424,
+        "total_ms": 66.57040002755821
+      }
+    },
+    {
+      "sample_id": "P16-C03-010",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "click_link",
+      "impersonated_entity": "GitHub",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 2,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.583,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 113.34430001443252,
+      "timings_ms": {
+        "validation_ms": 0.13080000644549727,
+        "pipeline_ms": 66.78350002039224,
+        "explanation_ms": 45.89579999446869,
+        "total_ms": 113.04520000703633
+      }
+    },
+    {
+      "sample_id": "P16-C03-011",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "ICICI Bank",
+      "urgency_level": "none",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5644,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 180.26660004397854,
+      "timings_ms": {
+        "validation_ms": 0.10789994848892093,
+        "pipeline_ms": 173.30199998104945,
+        "explanation_ms": 6.411899987142533,
+        "total_ms": 180.00220000976697
+      }
+    },
+    {
+      "sample_id": "P16-C03-012",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Airtel",
+      "urgency_level": "none",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5338,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 60.967500030528754,
+      "timings_ms": {
+        "validation_ms": 0.08899997919797897,
+        "pipeline_ms": 58.10389999533072,
+        "explanation_ms": 2.3593000369146466,
+        "total_ms": 60.705000010784715
+      }
+    },
+    {
+      "sample_id": "P16-C03-013",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Google Accounts",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5497,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 55.85170001722872,
+      "timings_ms": {
+        "validation_ms": 0.11069996980950236,
+        "pipeline_ms": 49.03689998900518,
+        "explanation_ms": 6.118600023910403,
+        "total_ms": 55.43090001447126
+      }
+    },
+    {
+      "sample_id": "P16-C03-014",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Delhi Metro Rail Corp",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4948,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 47.95810003997758,
+      "timings_ms": {
+        "validation_ms": 0.0727999722585082,
+        "pipeline_ms": 41.5575000224635,
+        "explanation_ms": 2.3923999979160726,
+        "total_ms": 44.300800014752895
+      }
+    },
+    {
+      "sample_id": "P16-C03-015",
+      "case_group": "C3_hard_negatives",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "click_link",
+      "impersonated_entity": "University of Delhi",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5207,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 54.153200006112456,
+      "timings_ms": {
+        "validation_ms": 0.13860000763088465,
+        "pipeline_ms": 49.634499999228865,
+        "explanation_ms": 2.6951999752782285,
+        "total_ms": 53.879400016739964
+      }
+    },
+    {
+      "sample_id": "P16-C04-001",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hi",
+      "script": "Devanagari",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "electricity_bill",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Electricity Board",
+      "urgency_level": "high",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4459,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 66.64440000895411,
+      "timings_ms": {
+        "validation_ms": 0.16909994883462787,
+        "pipeline_ms": 63.08559997705743,
+        "explanation_ms": 2.8948999824933708,
+        "total_ms": 66.3287999923341
+      }
+    },
+    {
+      "sample_id": "P16-C04-002",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hi",
+      "script": "Devanagari",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "State Bank of India",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5105,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 67.58729997090995,
+      "timings_ms": {
+        "validation_ms": 0.1545000122860074,
+        "pipeline_ms": 63.30470001557842,
+        "explanation_ms": 3.57810000423342,
+        "total_ms": 67.28649995056912
+      }
+    },
+    {
+      "sample_id": "P16-C04-003",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hi",
+      "script": "Devanagari",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Bank of Baroda",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.547,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 63.631099998019636,
+      "timings_ms": {
+        "validation_ms": 0.10810000821948051,
+        "pipeline_ms": 59.22519997693598,
+        "explanation_ms": 3.71890002861619,
+        "total_ms": 63.304000010248274
+      }
+    },
+    {
+      "sample_id": "P16-C04-004",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hi",
+      "script": "Devanagari",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Authentication Service",
+      "urgency_level": "medium",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5096,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 54.8117000143975,
+      "timings_ms": {
+        "validation_ms": 0.08949998300522566,
+        "pipeline_ms": 51.366600033361465,
+        "explanation_ms": 2.714000002015382,
+        "total_ms": 54.40879997331649
+      }
+    },
+    {
+      "sample_id": "P16-C04-005",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hinglish",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "lottery_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Lottery Department",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "high",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [
+        "payment_request"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4442,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 61.6260000388138,
+      "timings_ms": {
+        "validation_ms": 0.09580003097653389,
+        "pipeline_ms": 56.722900015302,
+        "explanation_ms": 4.30999998934567,
+        "total_ms": 61.34760001441464
+      }
+    },
+    {
+      "sample_id": "P16-C04-006",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hinglish",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "police_threat",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "legal_threat",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "urgency"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Delhi Police Cyber Cell",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4838,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 53.45740000484511,
+      "timings_ms": {
+        "validation_ms": 0.08320005144923925,
+        "pipeline_ms": 50.320700043812394,
+        "explanation_ms": 2.590999996755272,
+        "total_ms": 53.18099999567494
+      }
+    },
+    {
+      "sample_id": "P16-C04-007",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hinglish",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Punjab National Bank",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.511,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 52.31509997975081,
+      "timings_ms": {
+        "validation_ms": 0.10190001921728253,
+        "pipeline_ms": 49.141300027258694,
+        "explanation_ms": 2.5769000058062375,
+        "total_ms": 52.03439999604598
+      }
+    },
+    {
+      "sample_id": "P16-C04-008",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hinglish",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "none",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5274,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 49.28570002084598,
+      "timings_ms": {
+        "validation_ms": 0.07000000914558768,
+        "pipeline_ms": 36.696999974083155,
+        "explanation_ms": 12.057800020556897,
+        "total_ms": 49.01180003071204
+      }
+    },
+    {
+      "sample_id": "P16-C04-009",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "hinglish",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Zomato",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4627,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 49.08359999535605,
+      "timings_ms": {
+        "validation_ms": 0.07579999510198832,
+        "pipeline_ms": 46.09380004694685,
+        "explanation_ms": 2.5019999593496323,
+        "total_ms": 48.82919997908175
+      }
+    },
+    {
+      "sample_id": "P16-C04-010",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "mixed",
+      "script": "Mixed",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Bank Helpdesk",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "urgency"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5072,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 59.84780000289902,
+      "timings_ms": {
+        "validation_ms": 0.11209998046979308,
+        "pipeline_ms": 54.72770001506433,
+        "explanation_ms": 3.7755999946966767,
+        "total_ms": 58.87289997190237
+      }
+    },
+    {
+      "sample_id": "P16-C04-011",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "mixed",
+      "script": "Mixed",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "parcel_delivery",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "India Post",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5084,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 58.22150001768023,
+      "timings_ms": {
+        "validation_ms": 0.0990999978967011,
+        "pipeline_ms": 55.01439998624846,
+        "explanation_ms": 2.50990001950413,
+        "total_ms": 57.95580003177747
+      }
+    },
+    {
+      "sample_id": "P16-C04-012",
+      "case_group": "C4_multilingual",
+      "input_type": "text",
+      "language": "mixed",
+      "script": "Mixed",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "IRCTC",
+      "urgency_level": "medium",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.506,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 48.333599988836795,
+      "timings_ms": {
+        "validation_ms": 0.07029995322227478,
+        "pipeline_ms": 46.0130000137724,
+        "explanation_ms": 1.8689000280573964,
+        "total_ms": 48.123199958354235
+      }
+    },
+    {
+      "sample_id": "P16-C05-001",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Bank",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6961,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 69.83729999046773,
+      "timings_ms": {
+        "validation_ms": 0.15680002979934216,
+        "pipeline_ms": 67.17409996781498,
+        "explanation_ms": 2.0615000394172966,
+        "total_ms": 69.5932999951765
+      }
+    },
+    {
+      "sample_id": "P16-C05-002",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "electricity_bill",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Electricity Discom",
+      "urgency_level": "high",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.576,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 53.16720000701025,
+      "timings_ms": {
+        "validation_ms": 0.07720000576227903,
+        "pipeline_ms": 50.431200012099,
+        "explanation_ms": 2.2284999722614884,
+        "total_ms": 52.920499991159886
+      }
+    },
+    {
+      "sample_id": "P16-C05-003",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Bank",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "high",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "account_suspension",
+        "link_redirection",
+        "urgency"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.552,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 46.20829998748377,
+      "timings_ms": {
+        "validation_ms": 0.10060000931844115,
+        "pipeline_ms": 42.94249997474253,
+        "explanation_ms": 2.6987000019289553,
+        "total_ms": 45.93540000496432
+      }
+    },
+    {
+      "sample_id": "P16-C05-004",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "account_suspension",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Account Desk",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4779,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 252.24289996549487,
+      "timings_ms": {
+        "validation_ms": 0.12039998546242714,
+        "pipeline_ms": 247.46179999783635,
+        "explanation_ms": 4.17970004491508,
+        "total_ms": 251.97080004727468
+      }
+    },
+    {
+      "sample_id": "P16-C05-005",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Bank",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6623,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 339.38059996580705,
+      "timings_ms": {
+        "validation_ms": 0.07700000423938036,
+        "pipeline_ms": 333.1800000160001,
+        "explanation_ms": 5.609899992123246,
+        "total_ms": 339.03380000265315
+      }
+    },
+    {
+      "sample_id": "P16-C05-006",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation",
+        "urgency"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "State Bank of India",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.555,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 139.37480002641678,
+      "timings_ms": {
+        "validation_ms": 0.06029999349266291,
+        "pipeline_ms": 128.8279999862425,
+        "explanation_ms": 9.98729997081682,
+        "total_ms": 139.07719997223467
+      }
+    },
+    {
+      "sample_id": "P16-C05-007",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "otp_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Verification Desk",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5182,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 114.01570000452921,
+      "timings_ms": {
+        "validation_ms": 0.09789998875930905,
+        "pipeline_ms": 104.16129999794066,
+        "explanation_ms": 9.186299983412027,
+        "total_ms": 113.68489998858422
+      }
+    },
+    {
+      "sample_id": "P16-C05-008",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Tech Conference",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5171,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 87.2582999872975,
+      "timings_ms": {
+        "validation_ms": 0.0923000043258071,
+        "pipeline_ms": 84.3969999696128,
+        "explanation_ms": 2.2712000063620508,
+        "total_ms": 86.9671999826096
+      }
+    },
+    {
+      "sample_id": "P16-C05-009",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Tech Digest",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.3043,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 103.38669997872785,
+      "timings_ms": {
+        "validation_ms": 0.07909996202215552,
+        "pipeline_ms": 99.53710000263527,
+        "explanation_ms": 3.29949997831136,
+        "total_ms": 103.09059999417514
+      }
+    },
+    {
+      "sample_id": "P16-C05-010",
+      "case_group": "C5_obfuscated",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "refund_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Paytm",
+      "urgency_level": "medium",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4383,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 88.40319997398183,
+      "timings_ms": {
+        "validation_ms": 0.08589995559304953,
+        "pipeline_ms": 81.41540002543479,
+        "explanation_ms": 3.215299977455288,
+        "total_ms": 84.90169997094199
+      }
+    },
+    {
+      "sample_id": "P16-C06-001",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "credential_phishing",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "visit_url",
+      "impersonated_entity": "none",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 3,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5628,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 62.82750004902482,
+      "timings_ms": {
+        "validation_ms": 0.020600040443241596,
+        "pipeline_ms": 59.3098999815993,
+        "explanation_ms": 2.8569999849423766,
+        "total_ms": 62.55339999916032
+      }
+    },
+    {
+      "sample_id": "P16-C06-002",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "credential_phishing",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "visit_url",
+      "impersonated_entity": "Telecom",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.4959,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 74.15920001221821,
+      "timings_ms": {
+        "validation_ms": 0.01360004534944892,
+        "pipeline_ms": 66.56330003170297,
+        "explanation_ms": 7.091099978424609,
+        "total_ms": 73.84139997884631
+      }
+    },
+    {
+      "sample_id": "P16-C06-003",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "lottery_reward",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "visit_url",
+      "impersonated_entity": "Amazon",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5367,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 57.77650000527501,
+      "timings_ms": {
+        "validation_ms": 0.01580000389367342,
+        "pipeline_ms": 54.411299992352724,
+        "explanation_ms": 2.8795000398531556,
+        "total_ms": 57.521300041116774
+      }
+    },
+    {
+      "sample_id": "P16-C06-004",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "credential_phishing",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "visit_url",
+      "impersonated_entity": "State Bank of India",
+      "urgency_level": "high",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 2,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5214,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 56.89169996185228,
+      "timings_ms": {
+        "validation_ms": 0.011400028597563505,
+        "pipeline_ms": 50.6296000094153,
+        "explanation_ms": 5.856600007973611,
+        "total_ms": 56.66229996131733
+      }
+    },
+    {
+      "sample_id": "P16-C06-005",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "fake_payment_gateway",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "authority_impersonation",
+        "payment_demand"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "visit_url",
+      "impersonated_entity": "Razorpay",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5491,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 58.73200000496581,
+      "timings_ms": {
+        "validation_ms": 0.013299984857439995,
+        "pipeline_ms": 55.58240000391379,
+        "explanation_ms": 2.646500011906028,
+        "total_ms": 58.43480001203716
+      }
+    },
+    {
+      "sample_id": "P16-C06-006",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "State Bank of India",
+      "urgency_level": "none",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5638,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 37.50279999803752,
+      "timings_ms": {
+        "validation_ms": 0.012699980288743973,
+        "pipeline_ms": 33.088200027123094,
+        "explanation_ms": 3.7880000309087336,
+        "total_ms": 37.066200049594045
+      }
+    },
+    {
+      "sample_id": "P16-C06-007",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Income Tax Department",
+      "urgency_level": "none",
+      "status": "likely_scam",
+      "evidence_level": "moderate",
+      "signal_consistency": "moderate_agreement",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6321,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 101.45689995260909,
+      "timings_ms": {
+        "validation_ms": 0.06470002699643373,
+        "pipeline_ms": 94.94340000674129,
+        "explanation_ms": 2.8643999830819666,
+        "total_ms": 98.17270003259182
+      }
+    },
+    {
+      "sample_id": "P16-C06-008",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "MoHFW",
+      "urgency_level": "none",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.615,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 46.60349996993318,
+      "timings_ms": {
+        "validation_ms": 0.019600032828748226,
+        "pipeline_ms": 43.06009999709204,
+        "explanation_ms": 2.830200013704598,
+        "total_ms": 46.32959997979924
+      }
+    },
+    {
+      "sample_id": "P16-C06-009",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "malformed_url",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "none",
+      "urgency_level": "none",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection"
+      ],
+      "url_findings_count": 2,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6759,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 43.38089999509975,
+      "timings_ms": {
+        "validation_ms": 0.01160003012046218,
+        "pipeline_ms": 40.137700038030744,
+        "explanation_ms": 2.7754000038839877,
+        "total_ms": 43.106599943712354
+      }
+    },
+    {
+      "sample_id": "P16-C06-010",
+      "case_group": "C6_url_cases",
+      "input_type": "url",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Amazon India",
+      "urgency_level": "none",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "link_redirection"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5669,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 50.75059999944642,
+      "timings_ms": {
+        "validation_ms": 0.012399978004395962,
+        "pipeline_ms": 47.60389996226877,
+        "explanation_ms": 2.6876000338234007,
+        "total_ms": 50.475900003220886
+      }
+    },
+    {
+      "sample_id": "P16-C07-001",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "State Bank of India",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation",
+        "urgency"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5978,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 176.71269999118522,
+      "timings_ms": {
+        "validation_ms": 27.276899956632406,
+        "ocr_visual_ms": 111.26020003575832,
+        "pipeline_ms": 31.723199994303286,
+        "explanation_ms": 2.076899982057512,
+        "total_ms": 172.6395000005141
+      }
+    },
+    {
+      "sample_id": "P16-C07-002",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "electricity_bill",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "call_number",
+      "impersonated_entity": "Electricity Discom",
+      "urgency_level": "high",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6526,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 258.7076000054367,
+      "timings_ms": {
+        "validation_ms": 4.042399988975376,
+        "ocr_visual_ms": 187.7548999618739,
+        "pipeline_ms": 63.548100006300956,
+        "explanation_ms": 1.9765000324696302,
+        "total_ms": 258.460599987302
+      }
+    },
+    {
+      "sample_id": "P16-C07-003",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "parcel_delivery",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "India Post",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5672,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 112.90940002072603,
+      "timings_ms": {
+        "validation_ms": 1.622699957806617,
+        "ocr_visual_ms": 82.87039998685941,
+        "pipeline_ms": 26.25870000338182,
+        "explanation_ms": 1.7208000062964857,
+        "total_ms": 112.69520001951605
+      }
+    },
+    {
+      "sample_id": "P16-C07-004",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Amazon India",
+      "urgency_level": "none",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5815,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 133.83230002364144,
+      "timings_ms": {
+        "validation_ms": 1.4954000362195075,
+        "ocr_visual_ms": 87.74160000029951,
+        "pipeline_ms": 33.939699991606176,
+        "explanation_ms": 9.936399990692735,
+        "total_ms": 133.6200999794528
+      }
+    },
+    {
+      "sample_id": "P16-C07-005",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "HDFC Bank",
+      "urgency_level": "medium",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5253,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 120.42039999505505,
+      "timings_ms": {
+        "validation_ms": 1.8865999882109463,
+        "ocr_visual_ms": 86.17010002490133,
+        "pipeline_ms": 29.853800020646304,
+        "explanation_ms": 2.032299991697073,
+        "total_ms": 120.15839997911826
+      }
+    },
+    {
+      "sample_id": "P16-C07-006",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "lottery_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise"
+      ],
+      "secondary_tactics": [
+        "payment_demand"
+      ],
+      "requested_action": "pay_fee",
+      "impersonated_entity": "KBC",
+      "urgency_level": "medium",
+      "status": "likely_scam",
+      "evidence_level": "high",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [
+        "payment_request"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.3823,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 111.8203999940306,
+      "timings_ms": {
+        "validation_ms": 1.7279000021517277,
+        "ocr_visual_ms": 78.7269999855198,
+        "pipeline_ms": 28.75230001518503,
+        "explanation_ms": 2.0373999723233283,
+        "total_ms": 111.59670003689826
+      }
+    },
+    {
+      "sample_id": "P16-C07-007",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "job_scam",
+      "known_unknown_status": "known",
+      "primary_tactics": [
+        "reward_promise",
+        "trust_building"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "join_telegram",
+      "impersonated_entity": "WorkDesk India",
+      "urgency_level": "low",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "job_offer"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6055,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 119.51340001542121,
+      "timings_ms": {
+        "validation_ms": 1.5451000072062016,
+        "ocr_visual_ms": 82.29930000379682,
+        "pipeline_ms": 33.18169998237863,
+        "explanation_ms": 2.0417000050656497,
+        "total_ms": 119.28029998671263
+      }
+    },
+    {
+      "sample_id": "P16-C07-008",
+      "case_group": "C7_screenshot_cases",
+      "input_type": "image",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "non_scam",
+      "scam_category_if_known": "none",
+      "known_unknown_status": "known",
+      "primary_tactics": [],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "IndiGo Airlines",
+      "urgency_level": "none",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.585,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 1,
+      "explanation_available": true,
+      "warnings": [
+        "Local OCR engine (Tesseract) is not installed on this system, and the input image is not a registered test fixture."
+      ],
+      "latency_ms": 121.6788999736309,
+      "timings_ms": {
+        "validation_ms": 1.6144000110216439,
+        "ocr_visual_ms": 95.59579996857792,
+        "pipeline_ms": 21.447099978104234,
+        "explanation_ms": 2.562299952842295,
+        "total_ms": 121.43600004492328
+      }
+    },
+    {
+      "sample_id": "P16-C08-001",
+      "case_group": "C8_adversarial_injection",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "prompt_injection",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "adversarial_override"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "none",
+      "urgency_level": "high",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6003,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 47.580799960996956,
+      "timings_ms": {
+        "validation_ms": 0.10150001617148519,
+        "pipeline_ms": 43.46010001609102,
+        "explanation_ms": 2.4224999942816794,
+        "total_ms": 47.01669997302815
+      }
+    },
+    {
+      "sample_id": "P16-C08-002",
+      "case_group": "C8_adversarial_injection",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "bank_kyc",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "urgency",
+        "authority_impersonation",
+        "adversarial_override"
+      ],
+      "secondary_tactics": [
+        "action_demand"
+      ],
+      "requested_action": "click_link",
+      "impersonated_entity": "Bank",
+      "urgency_level": "high",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "link_redirection",
+        "urgency",
+        "verification_request"
+      ],
+      "url_findings_count": 1,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5599,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [
+        "Security notice: Input contains adversarial prompt injection patterns: verdict_tampering. Prompt content has been isolated and sanitized."
+      ],
+      "latency_ms": 52.1809000056237,
+      "timings_ms": {
+        "validation_ms": 0.23509998572990298,
+        "pipeline_ms": 48.538300034124404,
+        "explanation_ms": 2.9163999715819955,
+        "total_ms": 51.94599996320903
+      }
+    },
+    {
+      "sample_id": "P16-C08-003",
+      "case_group": "C8_adversarial_injection",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "prompt_injection",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "adversarial_override"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "none",
+      "urgency_level": "high",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.6493,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [
+        "Security notice: Input contains adversarial prompt injection patterns: system_override. Prompt content has been isolated and sanitized."
+      ],
+      "latency_ms": 49.6794999926351,
+      "timings_ms": {
+        "validation_ms": 5.757400009315461,
+        "pipeline_ms": 41.13039997173473,
+        "explanation_ms": 2.3592999787069857,
+        "total_ms": 49.438200017903
+      }
+    },
+    {
+      "sample_id": "P16-C08-004",
+      "case_group": "C8_adversarial_injection",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "prompt_injection",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "authority_impersonation",
+        "adversarial_override"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "Reserve Bank of India",
+      "urgency_level": "medium",
+      "status": "mixed_signals",
+      "evidence_level": "moderate",
+      "signal_consistency": "mixed",
+      "detected_tactics": [
+        "impersonation"
+      ],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5534,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 59.03450003825128,
+      "timings_ms": {
+        "validation_ms": 0.08109997725114226,
+        "pipeline_ms": 54.88060001516715,
+        "explanation_ms": 3.620699979364872,
+        "total_ms": 58.76210000133142
+      }
+    },
+    {
+      "sample_id": "P16-C08-005",
+      "case_group": "C8_adversarial_injection",
+      "input_type": "text",
+      "language": "en",
+      "script": "Latin",
+      "ground_truth_label": "scam",
+      "scam_category_if_known": "prompt_injection",
+      "known_unknown_status": "emerging",
+      "primary_tactics": [
+        "adversarial_override"
+      ],
+      "secondary_tactics": [],
+      "requested_action": "none",
+      "impersonated_entity": "none",
+      "urgency_level": "high",
+      "status": "likely_non_scam",
+      "evidence_level": "low",
+      "signal_consistency": "strong_agreement",
+      "detected_tactics": [],
+      "url_findings_count": 0,
+      "semantic_similarity": null,
+      "semantic_top_match": null,
+      "novelty_score": 0.5836,
+      "ocr_extracted": false,
+      "ocr_text_length": 0,
+      "visual_observations_count": 0,
+      "explanation_available": true,
+      "warnings": [],
+      "latency_ms": 40.9421999938786,
+      "timings_ms": {
+        "validation_ms": 0.07020001066848636,
+        "pipeline_ms": 37.433399993460625,
+        "explanation_ms": 3.0048000044189394,
+        "total_ms": 40.68049998022616
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "model_a_text_only": {
+    "name": "Model A (Phase 3 Text Only Baseline)",
+    "features_used": "TF-IDF (1, 2) n-grams (10,637 features)",
+    "metrics": {
+      "threshold": 0.3,
+      "accuracy": 0.9825,
+      "roc_auc": 0.9979,
+      "scam": {
+        "precision": 0.9576,
+        "recall": 0.9187,
+        "f1_score": 0.9378,
+        "support": 123
+      },
+      "non_scam": {
+        "precision": 0.9864,
+        "recall": 0.9932,
+        "f1_score": 0.9898,
+        "support": 733
+      },
+      "confusion_matrix": {
+        "tn": 728,
+        "fp": 5,
+        "fn": 10,
+        "tp": 113,
+        "matrix": [
+          [
+            728,
+            5
+          ],
+          [
+            10,
+            113
+          ]
+        ]
+      }
+    }
+  },
+  "model_b_text_plus_agg_url_risk": {
+    "name": "Model B (Text + Aggregate URL Presence & Risk)",
+    "features_used": "TF-IDF + has_url, url_count, max_risk_score, mean_risk_score (10,641 features)",
+    "metrics": {
+      "threshold": 0.3,
+      "accuracy": 0.9813,
+      "roc_auc": 0.9956,
+      "scam": {
+        "precision": 0.9573,
+        "recall": 0.9106,
+        "f1_score": 0.9333,
+        "support": 123
+      },
+      "non_scam": {
+        "precision": 0.9851,
+        "recall": 0.9932,
+        "f1_score": 0.9891,
+        "support": 733
+      },
+      "confusion_matrix": {
+        "tn": 728,
+        "fp": 5,
+        "fn": 11,
+        "tp": 112,
+        "matrix": [
+          [
+            728,
+            5
+          ],
+          [
+            11,
+            112
+          ]
+        ]
+      }
+    }
+  },
+  "model_c_full_hybrid": {
+    "name": "Model C (Phase 5 Full Text + URL Structural Hybrid)",
+    "features_used": "TF-IDF + 25 message-level URL structural features (10,662 features)",
+    "metrics": {
+      "threshold": 0.3,
+      "accuracy": 0.9813,
+      "roc_auc": 0.9957,
+      "scam": {
+        "precision": 0.9573,
+        "recall": 0.9106,
+        "f1_score": 0.9333,
+        "support": 123
+      },
+      "non_scam": {
+        "precision": 0.9851,
+        "recall": 0.9932,
+        "f1_score": 0.9891,
+        "support": 733
+      },
+      "confusion_matrix": {
+        "tn": 728,
+        "fp": 5,
+        "fn": 11,
+        "tp": 112,
+        "matrix": [
+          [
+            728,
+            5
+          ],
+          [
+            11,
+            112
+          ]
+        ]
+      }
+    }
+  }
+}

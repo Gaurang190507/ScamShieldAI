@@ -1,0 +1,79 @@
+[
+  {
+    "test_id": 1,
+    "name": "Benign text",
+    "verdict": "likely_non_scam",
+    "evidence_level": "low",
+    "latency_ms": 57.27769999066368,
+    "passed": true
+  },
+  {
+    "test_id": 2,
+    "name": "Obvious scam",
+    "verdict": "likely_scam",
+    "tactics": [
+      "account_suspension",
+      "impersonation",
+      "link_redirection",
+      "urgency"
+    ],
+    "passed": true
+  },
+  {
+    "test_id": 3,
+    "name": "URL only",
+    "input_type": "url_only",
+    "url_findings_count": 4,
+    "passed": true
+  },
+  {
+    "test_id": 4,
+    "name": "Mixed text + URL",
+    "verdict": "mixed_signals",
+    "has_url_findings": true,
+    "passed": true
+  },
+  {
+    "test_id": 5,
+    "name": "Legitimate delivery OTP",
+    "verdict": "likely_non_scam",
+    "decision_rule": "rule_p17_delivery_brand_disambiguation",
+    "passed": true
+  },
+  {
+    "test_id": 6,
+    "name": "Obfuscated scam",
+    "verdict": "mixed_signals",
+    "passed": true
+  },
+  {
+    "test_id": 7,
+    "name": "Screenshot / Image",
+    "input_type": "image_only",
+    "visual_obs_count": 1,
+    "passed": true
+  },
+  {
+    "test_id": 8,
+    "name": "Oversized input",
+    "bounded_safely": true,
+    "warnings": [
+      "Input text length (75,000 characters) exceeds the maximum allowed boundary of 50,000 characters.",
+      "Input text safely capped to 50,000 characters."
+    ],
+    "passed": true
+  },
+  {
+    "test_id": 9,
+    "name": "Malformed image",
+    "warning_present": true,
+    "passed": true
+  },
+  {
+    "test_id": 10,
+    "name": "GenAI unavailable / Mock fallback",
+    "explanation_available": true,
+    "explanation_provider": "mock",
+    "passed": true
+  }
+]

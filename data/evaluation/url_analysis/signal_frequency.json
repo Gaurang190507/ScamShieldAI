@@ -1,0 +1,11 @@
+{
+  "total_signals_triggered": 22,
+  "signal_counts": {
+    "insecure_http": 14,
+    "malformed_url": 8
+  },
+  "signal_prevalence_pct": {
+    "insecure_http": 12.96,
+    "malformed_url": 7.41
+  }
+}

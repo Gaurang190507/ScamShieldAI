@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_payment_qr_fraud",
+  "title": "Technical Guidance: QR Code Manipulation & Directional Payment Fraud",
+  "source": "ScamShield AI Financial Fraud Research",
+  "source_type": "security_guidance",
+  "publication_date": "2024-04-12",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "Global",
+  "topic": "qr_payment_fraud",
+  "license_status": "open_research_standard",
+  "content": "Quick Response (QR) codes facilitate electronic payment routing by encoding URLs or payment string parameters (such as UPI deep links). Adversaries exploit recipient cognitive biases through directional manipulation and deceptive framing.\n\n1. Reverse QR Payment Pretext:\nIn peer-to-peer marketplaces (e.g., selling second-hand goods), fraudsters pretend to be enthusiastic buyers. They send a generated QR code claiming: 'I have generated a payment QR. Scan this in your UPI app to receive the payment into your bank account.' When the victim scans the code, their payment application displays a 'Pay' dialog. If the victim enters their PIN, funds are immediately debited from the victim and sent to the scammer's beneficiary account.\n\n2. Fake Utility & Refund QR Codes:\nScammers circulate digital notices or stickers over WhatsApp/Telegram claiming to be income tax refunds, electricity bill rebates, or cashback rewards. The QR code resolves to a pre-filled collect request or malicious intent link.\n\n3. Verification Protocol:\n- Receiving funds through standard bank transfers or UPI requires only the account identifier or VPA (Virtual Payment Address). Scanning a QR code or entering a passcode is never required to receive money.\n- In physical environments, users must inspect QR code stickers on merchant counters for physical tampering or overlay stickers placed over legitimate merchant codes."
+}

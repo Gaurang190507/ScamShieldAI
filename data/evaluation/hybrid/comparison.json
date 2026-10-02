@@ -1,0 +1,78 @@
+{
+  "phase3_text_only": {
+    "threshold": 0.3,
+    "accuracy": 0.9825,
+    "roc_auc": 0.9979,
+    "scam": {
+      "precision": 0.9576,
+      "recall": 0.9187,
+      "f1_score": 0.9378,
+      "support": 123
+    },
+    "non_scam": {
+      "precision": 0.9864,
+      "recall": 0.9932,
+      "f1_score": 0.9898,
+      "support": 733
+    },
+    "confusion_matrix": {
+      "tn": 728,
+      "fp": 5,
+      "fn": 10,
+      "tp": 113,
+      "matrix": [
+        [
+          728,
+          5
+        ],
+        [
+          10,
+          113
+        ]
+      ]
+    }
+  },
+  "phase5_hybrid": {
+    "threshold": 0.3,
+    "accuracy": 0.9813,
+    "roc_auc": 0.9957,
+    "scam": {
+      "precision": 0.9573,
+      "recall": 0.9106,
+      "f1_score": 0.9333,
+      "support": 123
+    },
+    "non_scam": {
+      "precision": 0.9851,
+      "recall": 0.9932,
+      "f1_score": 0.9891,
+      "support": 733
+    },
+    "confusion_matrix": {
+      "tn": 728,
+      "fp": 5,
+      "fn": 11,
+      "tp": 112,
+      "matrix": [
+        [
+          728,
+          5
+        ],
+        [
+          11,
+          112
+        ]
+      ]
+    }
+  },
+  "absolute_difference_hybrid_minus_text": {
+    "accuracy": -0.0012,
+    "scam_precision": -0.0003,
+    "scam_recall": -0.0081,
+    "scam_f1": -0.0045,
+    "roc_auc": -0.0022,
+    "fp_diff": 0,
+    "fn_diff": 1,
+    "tp_diff": -1
+  }
+}

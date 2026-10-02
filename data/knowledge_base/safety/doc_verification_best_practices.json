@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_verification_best_practices",
+  "title": "Safety Playbook: Independent Verification Best Practices & Out-of-Band Validation",
+  "source": "ScamShield AI Incident Response & Cyber Safety Advisory",
+  "source_type": "security_guidance",
+  "publication_date": "2024-07-01",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "Global",
+  "topic": "verification_and_prevention",
+  "license_status": "open_research_standard",
+  "content": "Preventing fraudulent transactions requires consistent application of out-of-band verification principles and healthy skepticism toward unsolicited urgent communications.\n\n1. Out-of-Band Verification Principle:\nNever verify an alert using contact channels provided inside the suspicious communication itself. If an SMS claims your electricity is disconnected or bank account suspended:\n- Do not click links embedded in the SMS.\n- Do not call phone numbers printed in the message body.\n- Independently look up the official customer care telephone number from physical billing statements, the reverse side of your physical bank card, or verified official websites.\n\n2. Link & Domain Safety Standards:\n- Type the known institutional domain directly into the browser address bar rather than clicking hyperlinks.\n- Inspect web addresses for proper domain hierarchy: In legitimate domain names, the true domain appears immediately before the first single forward slash (e.g., in 'https://portal.bank.com/login', the domain is 'bank.com'; whereas in 'https://bank.com.fake-portal.xyz/login', the domain is 'fake-portal.xyz').\n- Treat newly registered top-level domains (.top, .xyz, .site, .club, .buzz) with extreme caution when banking or financial services are involved.\n\n3. Resistance to Urgency Pressure:\n- High urgency (e.g., 'respond in 10 minutes or lose your money') is designed to trigger panic and impair critical thinking. Legitimate institutions adhere to formal dispute windows and statutory regulatory notice requirements."
+}

@@ -1,0 +1,76 @@
+{
+  "test_total_messages": 856,
+  "test_messages_with_urls": 24,
+  "test_messages_without_urls": 832,
+  "url_subset_class_distribution": {
+    "scam": 22,
+    "non_scam": 2
+  },
+  "phase3_text_only_on_url_subset": {
+    "threshold": 0.3,
+    "accuracy": 0.9167,
+    "roc_auc": 1.0,
+    "scam": {
+      "precision": 0.9167,
+      "recall": 1.0,
+      "f1_score": 0.9565,
+      "support": 22
+    },
+    "non_scam": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 2
+    },
+    "confusion_matrix": {
+      "tn": 0,
+      "fp": 2,
+      "fn": 0,
+      "tp": 22,
+      "matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          22
+        ]
+      ]
+    }
+  },
+  "phase5_hybrid_on_url_subset": {
+    "threshold": 0.3,
+    "accuracy": 0.9167,
+    "roc_auc": 0.8636,
+    "scam": {
+      "precision": 0.9167,
+      "recall": 1.0,
+      "f1_score": 0.9565,
+      "support": 22
+    },
+    "non_scam": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 2
+    },
+    "confusion_matrix": {
+      "tn": 0,
+      "fp": 2,
+      "fn": 0,
+      "tp": 22,
+      "matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          22
+        ]
+      ]
+    }
+  },
+  "statistical_limitation_note": "The URL-containing test subset contains only 24 messages (22 scam, 2 non-scam). This sample size is statistically limited and reflects 2011 historical SMS data. It must not be treated as a definitive evaluation of modern URL threat efficacy."
+}

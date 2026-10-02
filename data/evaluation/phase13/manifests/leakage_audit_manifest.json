@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-02T20:14:28.574835+00:00",
+  "status": "PASS",
+  "is_leak_free": true,
+  "train_sample_count": 55,
+  "val_sample_count": 20,
+  "test_sample_count": 31,
+  "hard_negatives_count": 25,
+  "multilingual_count": 24,
+  "obfuscation_count": 20,
+  "novel_patterns_count": 16,
+  "uci_overlap": {
+    "exact_count": 0,
+    "normalized_count": 0
+  },
+  "phase7_reference_overlap": {
+    "exact_count": 0,
+    "normalized_count": 0
+  },
+  "phase12_overlap": {
+    "exact_count": 0
+  },
+  "cross_split_train_val": {
+    "exact_overlap": 0,
+    "normalized_overlap": 0,
+    "group_overlap": 0
+  },
+  "cross_split_train_test": {
+    "exact_overlap": 0,
+    "normalized_overlap": 0,
+    "group_overlap": 0
+  },
+  "cross_split_val_test": {
+    "exact_overlap": 0,
+    "normalized_overlap": 0,
+    "group_overlap": 0
+  },
+  "augmentation_group_isolation_violations": 0
+}

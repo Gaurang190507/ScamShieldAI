@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_phishing_smishing_indicators",
+  "title": "Technical Guidance: Phishing and Smishing Structural Indicators",
+  "source": "ScamShield AI Research Taxonomy & Industry Best Practice",
+  "source_type": "security_guidance",
+  "publication_date": "2024-06-01",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "Global",
+  "topic": "phishing_and_smishing_analysis",
+  "license_status": "open_research_standard",
+  "content": "Phishing and SMS phishing (smishing) rely on cognitive manipulation combined with technical obfuscation techniques to deceive recipients into surrendering sensitive information or executing unauthorized actions.\n\n1. Structural URL Risk Indicators:\nPhishing links frequently exhibit distinct technical anomalies:\n- IP-based hostnames (e.g., http://192.168.1.1/login) used to avoid domain reputation tracking.\n- Subdomain typosquatting or brand spoofing (e.g., sbi.banking-portal.com or hdfc-secure-auth.top).\n- Excessive URL shortening or redirection chains to mask destination servers.\n- Inclusion of sensitive keywords in path elements (e.g., /verify, /login, /unlock, /kyc-update) combined with newly registered generic top-level domains (.xyz, .top, .online, .site).\n- Embedded userinfo elements (e.g., https://legit-bank.com@evil-site.com) designed to deceive visual inspection.\n\n2. Behavioral & Tactical Pressure Patterns:\nPhishing communications predominantly deploy artificial urgency, fear of financial loss, or excessive reward incentives. Common manifestations include:\n- Imposing severe time constraints (e.g., 'within 30 minutes', 'before 11:59 PM tonight').\n- Threatening severe punitive action (e.g., 'permanent forfeiture of funds', 'legal arrest warrant issued', 'SIM card deactivation').\n- Demanding non-standard communication channels (e.g., insisting on contacting a personal WhatsApp number or non-toll-free mobile number)."
+}

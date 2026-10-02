@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_impersonation_authority",
+  "title": "Threat Pattern: Institutional & Law Enforcement Impersonation ('Digital Arrest')",
+  "source": "ScamShield AI Behavioral Tactic Intelligence",
+  "source_type": "security_guidance",
+  "publication_date": "2024-03-25",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "Global",
+  "topic": "authority_impersonation",
+  "license_status": "open_research_standard",
+  "content": "Authority impersonation exploits fear, deference to legal power, and sudden urgency to disrupt rational analysis.\n\n1. Modus Operandi & Common Pretexts:\n- Law Enforcement / Regulatory Impersonation: Fraudsters claim to represent Police, CBI, Customs, ED, or court judiciaries. They state that the victim's name or national identity number (Aadhaar, Social Security, National Insurance) is implicated in money laundering, drug trafficking, or illegal package shipping.\n- Digital Arrest Coercion: Victims are instructed to stay connected continuously via video calls (Skype, WhatsApp) while fraudsters display forged police uniforms, institutional backdrops, and bogus court arrest warrants.\n- Fund Liquidation Demands: Scammers coerce victims into liquidating mutual funds, fixed deposits, or savings and transferring balances to designated 'Supreme Court Escrow' or 'Reserve Bank Audit' accounts, promising the funds will be refunded after verification. No funds are ever returned.\n\n2. Key Verification Rules:\n- Law enforcement agencies and government departments never issue arrest warrants or conduct judicial trials over messaging applications or video calls.\n- Government institutions never request funds to be transferred into individual bank accounts or designated private clearing accounts for 'audit verification'.\n- Any demand to keep legal proceedings confidential from family members or legal counsel is a hallmark of fraud."
+}

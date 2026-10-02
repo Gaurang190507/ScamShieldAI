@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-02T20:14:27.708737+00:00",
+  "total_eval_cases_audited": 74,
+  "total_evaluation_samples_audited": 74,
+  "total_uci_cases": 5160,
+  "total_reference_cases": 3612,
+  "exact_text_overlap_count": 0,
+  "exact_leakage_count": 0,
+  "normalized_text_overlap_count": 0,
+  "normalized_leakage_count": 0,
+  "semantic_reference_leakage_count": 0,
+  "exact_leaks": [],
+  "normalized_leaks": [],
+  "semantic_reference_leaks": [],
+  "image_hashes": {},
+  "leakage_audit_passed": true,
+  "audit_passed": true
+}

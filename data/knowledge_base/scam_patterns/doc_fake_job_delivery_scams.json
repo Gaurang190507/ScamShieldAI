@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_fake_job_delivery_scams",
+  "title": "Threat Pattern: Part-Time Job Tasks and Courier / Delivery Phishing Scams",
+  "source": "ScamShield AI Behavioral Tactic Intelligence",
+  "source_type": "security_guidance",
+  "publication_date": "2024-02-18",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "Global",
+  "topic": "task_and_delivery_scams",
+  "license_status": "open_research_standard",
+  "content": "Employment task fraud and delivery notification deception exploit everyday economic activities and online ordering behavior.\n\n1. Part-Time Task Scams (YouTube / Hotel Rating / Trading Tasks):\n- Recruitment: Unsolicited WhatsApp, SMS, or Telegram messages offering work-from-home employment paying high daily sums (e.g., Rs. 2,000 to Rs. 8,000/day) for simple actions like liking YouTube videos, rating Google Maps locations, or reviewing hotels.\n- Initial Payouts: Victims complete 2-3 trivial tasks and receive modest sums (Rs. 150-500) directly into their bank accounts to manufacture trust.\n- Escalation to Prepaid Tasks: Victims are added to Telegram VIP groups and instructed to deposit capital to unlock 'crypto arbitrage' or 'merchant rating' tasks with promised 30-50% returns. Once large deposits are made, withdrawals are blocked and victims are pressured for tax or clearance fees.\n\n2. Courier Delivery Notification Scams:\n- SMS messages allege that a postal package cannot be dispatched due to an incomplete delivery address or minor unpaid customs duty.\n- Links redirect to counterfeit courier web pages (spoofing India Post, FedEx, DHL, USPS) requiring address entry and card payment details.\n- The card details and subsequent OTP are used by fraudsters to execute fraudulent high-value debits."
+}

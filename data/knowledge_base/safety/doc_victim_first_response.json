@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_victim_first_response",
+  "title": "Safety Playbook: Immediate Victim First-Response & Incident Remediation",
+  "source": "ScamShield AI Incident Response & Cyber Safety Advisory",
+  "source_type": "security_guidance",
+  "publication_date": "2024-07-01",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "Global",
+  "topic": "incident_response_and_remediation",
+  "license_status": "open_research_standard",
+  "content": "When an individual suspects they have interacted with a fraudulent message, disclosed credentials, or authorized an unauthorized transaction, swift execution of containment protocols is critical.\n\n1. Immediate Containment Checklist (First 15-30 Minutes):\n- Freeze Financial Channels: Immediately contact the issuing bank's official fraud helpline or use official mobile banking apps to freeze debit/credit cards, disable net banking access, and block UPI transactions.\n- Report to Cybercrime Authorities: In India, dial 1930 immediately or log on to cybercrime.gov.in. Providing transaction reference numbers (UTR, transaction ID) within the first hour dramatically improves the rate of inter-bank fund recovery.\n- Disconnect Device If Remote Software Installed: If remote desktop applications (AnyDesk, TeamViewer) were installed, immediately disconnect the device from Wi-Fi and mobile data, uninstall the application, and boot into safe mode or factory reset.\n\n2. Credential Invalidation & Hygiene:\n- Change passwords for banking portals, primary email accounts, and mobile carrier accounts from an uncompromised secondary device.\n- Terminate all active web sessions ('Log out of all devices') across critical identity providers (Google, Microsoft, Apple ID).\n- Verify SMS forwarding settings on the mobile device (dial carrier codes like ##002# in India to clear unconditional call/SMS diverts).\n\n3. Evidence Preservation:\n- Capture screenshots of the fraudulent message, sender phone numbers, SMS sender headers, payment transfer receipts, and associated web links before deleting them."
+}

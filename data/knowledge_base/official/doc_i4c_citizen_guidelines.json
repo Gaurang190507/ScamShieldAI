@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_i4c_citizen_guidelines",
+  "title": "I4C National Cyber Crime Reporting Portal: Citizen Safety & Modus Operandi Guidelines",
+  "source": "Indian Cyber Crime Coordination Centre (I4C), Ministry of Home Affairs",
+  "source_type": "official_knowledge",
+  "publication_date": "2024-01-15",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "IN",
+  "topic": "cybercrime_reporting_and_emerging_fraud",
+  "license_status": "reference_advisory_excerpt",
+  "content": "The Indian Cyber Crime Coordination Centre (I4C) issues standard advisories on citizen cyber fraud prevention and immediate remediation protocols. Key observations and directives include:\n\n1. Immediate Remediation (Helpline 1930 & Portal):\nIf a citizen suffers financial fraud, immediate reporting within the golden hour to National Cyber Crime Helpline 1930 or at cybercrime.gov.in enables law enforcement to trigger the Citizen Financial Cyber Fraud Reporting and Management System (CFCFRMS). This freezes defrauded funds across recipient bank accounts and payment aggregators before withdrawal.\n\n2. Digital Arrest Impersonation Modus Operandi:\nFraudsters frequently contact victims via video or voice calls impersonating officials from CBI, Police, Customs, ED, or court judges. They allege that packages containing illicit goods, contraband, or SIM cards used in criminal activity were seized in the victim's name. Perpetrators demand the victim remain isolated on video calls (referred to falsely as 'digital arrest') and compel transfer of funds to 'government clearing accounts' for verification. Official agencies reiterate: Law enforcement agencies never conduct arrests or interrogations over Skype, WhatsApp, or video calls, and never demand funds for 'verification'.\n\n3. Courier & Parcel Delivery Fraud:\nScammers send fake SMS notifications claiming parcels (e.g., India Post, DHL, FedEx) cannot be delivered due to incomplete addresses or unpaid minor customs fees (e.g., Rs. 25). The embedded link leads to credential harvesting phishing portals designed to steal banking card details."
+}

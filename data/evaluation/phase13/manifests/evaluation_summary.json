@@ -1,0 +1,1619 @@
+{
+  "comparison": {
+    "Model_A_Baseline": {
+      "historical_english": {
+        "tp": 3,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "total": 5,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mean_confidence": 0.5261
+      },
+      "modern_indian_english": {
+        "tp": 2,
+        "tn": 0,
+        "fp": 0,
+        "fn": 3,
+        "total": 5,
+        "accuracy": 0.4,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714,
+        "fpr": 0.0,
+        "fnr": 0.6,
+        "mean_confidence": 0.309
+      },
+      "romanized_hinglish": {
+        "tp": 2,
+        "tn": 6,
+        "fp": 0,
+        "fn": 4,
+        "total": 12,
+        "accuracy": 0.6667,
+        "precision": 1.0,
+        "recall": 0.3333,
+        "f1": 0.5,
+        "fpr": 0.0,
+        "fnr": 0.6667,
+        "mean_confidence": 0.1661
+      },
+      "native_hindi": {
+        "tp": 0,
+        "tn": 6,
+        "fp": 0,
+        "fn": 6,
+        "total": 12,
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "fnr": 1.0,
+        "mean_confidence": 0.147
+      },
+      "obfuscated_messages": {
+        "tp": 12,
+        "tn": 0,
+        "fp": 0,
+        "fn": 8,
+        "total": 20,
+        "accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.75,
+        "fpr": 0.0,
+        "fnr": 0.4,
+        "mean_confidence": 0.3356
+      },
+      "hard_negatives": {
+        "tp": 0,
+        "tn": 24,
+        "fp": 1,
+        "fn": 0,
+        "total": 25,
+        "accuracy": 0.96,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.04,
+        "fnr": 0.0,
+        "mean_confidence": 0.1722
+      },
+      "novel_threat_patterns": {
+        "tp": 4,
+        "tn": 0,
+        "fp": 0,
+        "fn": 12,
+        "total": 16,
+        "accuracy": 0.25,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "fpr": 0.0,
+        "fnr": 0.75,
+        "mean_confidence": 0.2353
+      },
+      "consolidated_test": {
+        "tp": 7,
+        "tn": 8,
+        "fp": 0,
+        "fn": 16,
+        "total": 31,
+        "accuracy": 0.4839,
+        "precision": 1.0,
+        "recall": 0.3043,
+        "f1": 0.4666,
+        "fpr": 0.0,
+        "fnr": 0.6957,
+        "mean_confidence": 0.2448
+      }
+    },
+    "Model_B_CharNgram": {
+      "historical_english": {
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 1,
+        "total": 5,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "fpr": 0.0,
+        "fnr": 0.3333,
+        "mean_confidence": 0.5267
+      },
+      "modern_indian_english": {
+        "tp": 4,
+        "tn": 0,
+        "fp": 0,
+        "fn": 1,
+        "total": 5,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8889,
+        "fpr": 0.0,
+        "fnr": 0.2,
+        "mean_confidence": 0.5782
+      },
+      "romanized_hinglish": {
+        "tp": 6,
+        "tn": 6,
+        "fp": 0,
+        "fn": 0,
+        "total": 12,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mean_confidence": 0.5357
+      },
+      "native_hindi": {
+        "tp": 6,
+        "tn": 6,
+        "fp": 0,
+        "fn": 0,
+        "total": 12,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mean_confidence": 0.5401
+      },
+      "obfuscated_messages": {
+        "tp": 20,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "total": 20,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mean_confidence": 0.588
+      },
+      "hard_negatives": {
+        "tp": 0,
+        "tn": 24,
+        "fp": 1,
+        "fn": 0,
+        "total": 25,
+        "accuracy": 0.96,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.04,
+        "fnr": 0.0,
+        "mean_confidence": 0.4989
+      },
+      "novel_threat_patterns": {
+        "tp": 5,
+        "tn": 0,
+        "fp": 0,
+        "fn": 11,
+        "total": 16,
+        "accuracy": 0.3125,
+        "precision": 1.0,
+        "recall": 0.3125,
+        "f1": 0.4762,
+        "fpr": 0.0,
+        "fnr": 0.6875,
+        "mean_confidence": 0.547
+      },
+      "consolidated_test": {
+        "tp": 18,
+        "tn": 8,
+        "fp": 0,
+        "fn": 5,
+        "total": 31,
+        "accuracy": 0.8387,
+        "precision": 1.0,
+        "recall": 0.7826,
+        "f1": 0.878,
+        "fpr": 0.0,
+        "fnr": 0.2174,
+        "mean_confidence": 0.5453
+      }
+    },
+    "Model_C_SemanticDense": {
+      "historical_english": {
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 1,
+        "total": 5,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "fpr": 0.0,
+        "fnr": 0.3333,
+        "mean_confidence": 0.4839
+      },
+      "modern_indian_english": {
+        "tp": 5,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "total": 5,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mean_confidence": 0.5619
+      },
+      "romanized_hinglish": {
+        "tp": 6,
+        "tn": 6,
+        "fp": 0,
+        "fn": 0,
+        "total": 12,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mean_confidence": 0.5181
+      },
+      "native_hindi": {
+        "tp": 6,
+        "tn": 3,
+        "fp": 3,
+        "fn": 0,
+        "total": 12,
+        "accuracy": 0.75,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "fpr": 0.5,
+        "fnr": 0.0,
+        "mean_confidence": 0.5327
+      },
+      "obfuscated_messages": {
+        "tp": 18,
+        "tn": 0,
+        "fp": 0,
+        "fn": 2,
+        "total": 20,
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9474,
+        "fpr": 0.0,
+        "fnr": 0.1,
+        "mean_confidence": 0.5643
+      },
+      "hard_negatives": {
+        "tp": 0,
+        "tn": 12,
+        "fp": 13,
+        "fn": 0,
+        "total": 25,
+        "accuracy": 0.48,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.52,
+        "fnr": 0.0,
+        "mean_confidence": 0.4963
+      },
+      "novel_threat_patterns": {
+        "tp": 13,
+        "tn": 0,
+        "fp": 0,
+        "fn": 3,
+        "total": 16,
+        "accuracy": 0.8125,
+        "precision": 1.0,
+        "recall": 0.8125,
+        "f1": 0.8966,
+        "fpr": 0.0,
+        "fnr": 0.1875,
+        "mean_confidence": 0.5473
+      },
+      "consolidated_test": {
+        "tp": 19,
+        "tn": 8,
+        "fp": 0,
+        "fn": 4,
+        "total": 31,
+        "accuracy": 0.871,
+        "precision": 1.0,
+        "recall": 0.8261,
+        "f1": 0.9048,
+        "fpr": 0.0,
+        "fnr": 0.1739,
+        "mean_confidence": 0.5321
+      }
+    },
+    "Model_D_HybridFusion": {
+      "historical_english": {
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 1,
+        "total": 5,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "fpr": 0.0,
+        "fnr": 0.3333,
+        "mean_confidence": 0.4885
+      },
+      "modern_indian_english": {
+        "tp": 5,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "total": 5,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mean_confidence": 0.8098
+      },
+      "romanized_hinglish": {
+        "tp": 4,
+        "tn": 6,
+        "fp": 0,
+        "fn": 2,
+        "total": 12,
+        "accuracy": 0.8333,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "fpr": 0.0,
+        "fnr": 0.3333,
+        "mean_confidence": 0.5266
+      },
+      "native_hindi": {
+        "tp": 3,
+        "tn": 6,
+        "fp": 0,
+        "fn": 3,
+        "total": 12,
+        "accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "fpr": 0.0,
+        "fnr": 0.5,
+        "mean_confidence": 0.5062
+      },
+      "obfuscated_messages": {
+        "tp": 19,
+        "tn": 0,
+        "fp": 0,
+        "fn": 1,
+        "total": 20,
+        "accuracy": 0.95,
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1": 0.9744,
+        "fpr": 0.0,
+        "fnr": 0.05,
+        "mean_confidence": 0.7916
+      },
+      "hard_negatives": {
+        "tp": 0,
+        "tn": 17,
+        "fp": 8,
+        "fn": 0,
+        "total": 25,
+        "accuracy": 0.68,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.32,
+        "fnr": 0.0,
+        "mean_confidence": 0.429
+      },
+      "novel_threat_patterns": {
+        "tp": 12,
+        "tn": 0,
+        "fp": 0,
+        "fn": 4,
+        "total": 16,
+        "accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571,
+        "fpr": 0.0,
+        "fnr": 0.25,
+        "mean_confidence": 0.67
+      },
+      "consolidated_test": {
+        "tp": 18,
+        "tn": 8,
+        "fp": 0,
+        "fn": 5,
+        "total": 31,
+        "accuracy": 0.8387,
+        "precision": 1.0,
+        "recall": 0.7826,
+        "f1": 0.878,
+        "fpr": 0.0,
+        "fnr": 0.2174,
+        "mean_confidence": 0.6064
+      }
+    }
+  },
+  "obfuscation_pairs": {
+    "total_pairs": 10,
+    "flips": {
+      "Model_A_Baseline": 0,
+      "Model_B_CharNgram": 0,
+      "Model_D_HybridFusion": 1
+    },
+    "flip_rates": {
+      "Model_A_Baseline": 0.0,
+      "Model_B_CharNgram": 0.0,
+      "Model_D_HybridFusion": 0.1
+    }
+  },
+  "tactic_ablation": {
+    "text_only": {
+      "tp": 18,
+      "tn": 8,
+      "fp": 0,
+      "fn": 5,
+      "total": 31,
+      "accuracy": 0.8387,
+      "precision": 1.0,
+      "recall": 0.7826,
+      "f1": 0.878,
+      "fpr": 0.0,
+      "fnr": 0.2174,
+      "mean_confidence": 0.5453
+    },
+    "text_plus_tactics": {
+      "tp": 18,
+      "tn": 8,
+      "fp": 0,
+      "fn": 5,
+      "total": 31,
+      "accuracy": 0.8387,
+      "precision": 1.0,
+      "recall": 0.7826,
+      "f1": 0.878,
+      "fpr": 0.0,
+      "fnr": 0.2174
+    },
+    "text_plus_tactics_plus_urls": {
+      "tp": 18,
+      "tn": 8,
+      "fp": 0,
+      "fn": 5,
+      "total": 31,
+      "accuracy": 0.8387,
+      "precision": 1.0,
+      "recall": 0.7826,
+      "f1": 0.878,
+      "fpr": 0.0,
+      "fnr": 0.2174,
+      "mean_confidence": 0.6064
+    }
+  },
+  "novelty_analysis": {
+    "summary": {
+      "known_scam": {
+        "count": 32,
+        "mean_novelty": 0.4927,
+        "mean_similarity": 0.5073
+      },
+      "known_non_scam": {
+        "count": 45,
+        "mean_novelty": 0.543,
+        "mean_similarity": 0.457
+      },
+      "unknown_scam": {
+        "count": 19,
+        "mean_novelty": 0.5693,
+        "mean_similarity": 0.4307
+      },
+      "unknown_non_scam": {
+        "count": 0,
+        "mean_novelty": 0.0,
+        "mean_similarity": 0.0
+      }
+    },
+    "matrix": {
+      "known_scam": [
+        {
+          "sample_id": "p13_ts_hist_scam_001",
+          "text": "WINNER! You have won a guaranteed cash prize of 1,000 pounds...",
+          "label": "scam",
+          "max_similarity": 0.8019,
+          "novelty_score": 0.1981,
+          "model_b_prob": 0.5583
+        },
+        {
+          "sample_id": "p13_ts_hist_scam_002",
+          "text": "URGENT! Your mobile number was awarded 5,000 bonus points. T...",
+          "label": "scam",
+          "max_similarity": 0.7405,
+          "novelty_score": 0.2595,
+          "model_b_prob": 0.5757
+        },
+        {
+          "sample_id": "p13_ts_hist_scam_003",
+          "text": "FREE ringtone! Text YES to 8007 to receive your polyphonic t...",
+          "label": "scam",
+          "max_similarity": 0.8267,
+          "novelty_score": 0.1733,
+          "model_b_prob": 0.4865
+        },
+        {
+          "sample_id": "p13_ts_ind_scam_001",
+          "text": "Dear PNB Customer, your NetBanking user ID has been disabled...",
+          "label": "scam",
+          "max_similarity": 0.4782,
+          "novelty_score": 0.5218,
+          "model_b_prob": 0.5248
+        },
+        {
+          "sample_id": "p13_ts_ind_scam_002",
+          "text": "Electricity Bill Final Notice: Power will be disconnected to...",
+          "label": "scam",
+          "max_similarity": 0.3449,
+          "novelty_score": 0.6551,
+          "model_b_prob": 0.5911
+        },
+        {
+          "sample_id": "p13_ts_ind_scam_003",
+          "text": "Earn Rs 5,000 per day by rating hotels on Google Maps. No ca...",
+          "label": "scam",
+          "max_similarity": 0.4926,
+          "novelty_score": 0.5074,
+          "model_b_prob": 0.5775
+        },
+        {
+          "sample_id": "p13_ts_ind_scam_004",
+          "text": "URGENT: Supreme Court Cyber Cell has issued an arrest warran...",
+          "label": "scam",
+          "max_similarity": 0.4292,
+          "novelty_score": 0.5708,
+          "model_b_prob": 0.6021
+        },
+        {
+          "sample_id": "p13_ts_ind_scam_005",
+          "text": "India Post: Shipment IN77819 held at customs hub due to wron...",
+          "label": "scam",
+          "max_similarity": 0.4298,
+          "novelty_score": 0.5702,
+          "model_b_prob": 0.5954
+        },
+        {
+          "sample_id": "p13_ts_hl_scam_001",
+          "text": "Aapka Canara Bank account suspend ho chuka hai. Re-activate ...",
+          "label": "scam",
+          "max_similarity": 0.531,
+          "novelty_score": 0.469,
+          "model_b_prob": 0.6261
+        },
+        {
+          "sample_id": "p13_ts_hl_scam_002",
+          "text": "Bijli vibhag: Bill payment na hone par aaj raat 9 baje power...",
+          "label": "scam",
+          "max_similarity": 0.4741,
+          "novelty_score": 0.5259,
+          "model_b_prob": 0.5654
+        },
+        {
+          "sample_id": "p13_ts_hl_scam_003",
+          "text": "Ghar baithe part time job: Daily YouTube channel subscribe k...",
+          "label": "scam",
+          "max_similarity": 0.4423,
+          "novelty_score": 0.5577,
+          "model_b_prob": 0.5884
+        },
+        {
+          "sample_id": "p13_ts_hl_scam_004",
+          "text": "Aapka courier delivery address incomplete hai. Dobara delive...",
+          "label": "scam",
+          "max_similarity": 0.5002,
+          "novelty_score": 0.4998,
+          "model_b_prob": 0.5658
+        },
+        {
+          "sample_id": "p13_ts_hi_scam_001",
+          "text": "\u092c\u0948\u0902\u0915 \u0911\u092b\u093c \u092c\u0921\u093c\u094c\u0926\u093e \u0905\u0932\u0930\u094d\u091f: \u0906\u092a\u0915\u093e \u0921\u0947\u092c\u093f\u091f \u0915\u093e\u0930\u094d\u0921 \u092c\u094d\u0932\u0949\u0915 \u0939\u094b \u0917\u092f\u093e \u0939\u0948\u0964 \u0907\u0938\u0947...",
+          "label": "scam",
+          "max_similarity": 0.465,
+          "novelty_score": 0.535,
+          "model_b_prob": 0.582
+        },
+        {
+          "sample_id": "p13_ts_hi_scam_002",
+          "text": "\u0935\u093f\u0926\u094d\u092f\u0941\u0924 \u0928\u093f\u0917\u092e \u0938\u0942\u091a\u0928\u093e: \u092c\u0915\u093e\u092f\u093e \u092c\u093f\u0932 \u091c\u092e\u093e \u0928 \u0915\u0930\u0928\u0947 \u092a\u0930 \u0906\u091c \u0930\u093e\u0924 10 \u092c\u091c\u0947 \u0906\u092a...",
+          "label": "scam",
+          "max_similarity": 0.493,
+          "novelty_score": 0.507,
+          "model_b_prob": 0.5708
+        },
+        {
+          "sample_id": "p13_ts_hi_scam_003",
+          "text": "\u092a\u093e\u0930\u094d\u091f-\u091f\u093e\u0907\u092e \u0928\u094c\u0915\u0930\u0940: \u0939\u094b\u091f\u0932 \u0938\u092e\u0940\u0915\u094d\u0937\u093e \u0932\u093f\u0916\u0915\u0930 \u092a\u094d\u0930\u0924\u093f\u0926\u093f\u0928 \u0930\u0941 4,000 \u0915\u092e\u093e\u090f\u0902...",
+          "label": "scam",
+          "max_similarity": 0.4752,
+          "novelty_score": 0.5248,
+          "model_b_prob": 0.5554
+        },
+        {
+          "sample_id": "p13_ts_hi_scam_004",
+          "text": "\u0938\u0940\u092c\u0940\u0906\u0908 \u0921\u093f\u091c\u093f\u091f\u0932 \u0905\u0930\u0947\u0938\u094d\u091f: \u0906\u092a\u0915\u0947 \u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921 \u0915\u093e \u0909\u092a\u092f\u094b\u0917 \u092e\u0928\u0940 \u0932\u0949\u0928\u094d\u0921\u094d\u0930\u093f\u0902...",
+          "label": "scam",
+          "max_similarity": 0.493,
+          "novelty_score": 0.507,
+          "model_b_prob": 0.5793
+        },
+        {
+          "sample_id": "p13_ts_hi_scam_005",
+          "text": "\u092d\u093e\u0930\u0924\u0940\u092f \u0921\u093e\u0915 \u0938\u0947\u0935\u093e: \u0905\u092a\u0942\u0930\u094d\u0923 \u092a\u0924\u0947 \u0915\u0947 \u0915\u093e\u0930\u0923 \u0906\u092a\u0915\u0940 \u0921\u093e\u0915 \u0930\u094b\u0915 \u0926\u0940 \u0917\u0908 \u0939\u0948\u0964 \u092a...",
+          "label": "scam",
+          "max_similarity": 0.5171,
+          "novelty_score": 0.4829,
+          "model_b_prob": 0.5639
+        },
+        {
+          "sample_id": "p13_ts_obf_scam_001",
+          "text": "URGENT: Your SBI bank account will be b10cked today. Verify ...",
+          "label": "scam",
+          "max_similarity": 0.5032,
+          "novelty_score": 0.4968,
+          "model_b_prob": 0.6118
+        },
+        {
+          "sample_id": "p13_ts_obf_scam_002",
+          "text": "Electricity Alert: P o w e r cutoff scheduled at 9 PM. Call ...",
+          "label": "scam",
+          "max_similarity": 0.5035,
+          "novelty_score": 0.4965,
+          "model_b_prob": 0.5684
+        },
+        {
+          "sample_id": "p13_ts_obf_scam_003",
+          "text": "HDFC Bank: Suspicious charge of Rs 40,000. D.o.w.n.l.o.a.d A...",
+          "label": "scam",
+          "max_similarity": 0.3805,
+          "novelty_score": 0.6195,
+          "model_b_prob": 0.5364
+        },
+        {
+          "sample_id": "p13_ml_hi_001",
+          "text": "\u0905\u0924\u093f \u0906\u0935\u0936\u094d\u092f\u0915: \u0906\u092a\u0915\u093e \u092c\u093f\u091c\u0932\u0940 \u0915\u093e \u092c\u093f\u0932 \u092c\u0915\u093e\u092f\u093e \u0939\u094b\u0928\u0947 \u0915\u0947 \u0915\u093e\u0930\u0923 \u0906\u091c \u0930\u093e\u0924 9:30...",
+          "label": "scam",
+          "max_similarity": 0.4527,
+          "novelty_score": 0.5473,
+          "model_b_prob": 0.567
+        },
+        {
+          "sample_id": "p13_ml_hi_002",
+          "text": "\u090f\u0938\u092c\u0940\u0906\u0908 \u092c\u0948\u0902\u0915 \u0916\u093e\u0924\u093e \u091a\u0947\u0924\u093e\u0935\u0928\u0940: \u0906\u092a\u0915\u093e \u0916\u093e\u0924\u093e \u092c\u094d\u0932\u0949\u0915 \u0915\u0930 \u0926\u093f\u092f\u093e \u0917\u092f\u093e \u0939\u0948\u0964 \u0905\u0928...",
+          "label": "scam",
+          "max_similarity": 0.4678,
+          "novelty_score": 0.5322,
+          "model_b_prob": 0.6058
+        },
+        {
+          "sample_id": "p13_ml_hi_003",
+          "text": "\u092c\u0927\u093e\u0908! \u092a\u094d\u0930\u0927\u093e\u0928\u092e\u0902\u0924\u094d\u0930\u0940 \u0915\u093f\u0938\u093e\u0928 \u092f\u094b\u091c\u0928\u093e \u0915\u0947 \u0924\u0939\u0924 \u0906\u092a\u0915\u094b \u0930\u0941 15,000 \u0915\u0940 \u0915\u093f\u0938\u094d...",
+          "label": "scam",
+          "max_similarity": 0.5177,
+          "novelty_score": 0.4823,
+          "model_b_prob": 0.5927
+        },
+        {
+          "sample_id": "p13_ml_hi_004",
+          "text": "\u0938\u0940\u092c\u0940\u0906\u0908 \u0921\u093f\u091c\u093f\u091f\u0932 \u0905\u0930\u0947\u0938\u094d\u091f: \u0906\u092a\u0915\u0947 \u0906\u0927\u093e\u0930 \u0928\u0902\u092c\u0930 \u0938\u0947 \u0917\u0948\u0930-\u0915\u093e\u0928\u0942\u0928\u0940 \u092a\u093e\u0930\u094d\u0938\u0932 \u092a\u0915...",
+          "label": "scam",
+          "max_similarity": 0.498,
+          "novelty_score": 0.502,
+          "model_b_prob": 0.5777
+        },
+        {
+          "sample_id": "p13_ml_hi_005",
+          "text": "\u0921\u093e\u0915 \u0935\u093f\u092d\u093e\u0917 \u0938\u0942\u091a\u0928\u093e: \u0906\u092a\u0915\u0947 \u0915\u0942\u0930\u093f\u092f\u0930 \u0915\u093e \u092a\u0924\u093e \u0905\u0927\u0942\u0930\u093e \u0939\u0948\u0964 \u092a\u0941\u0928\u0903 \u0935\u093f\u0924\u0930\u0923 \u0939\u0947\u0924...",
+          "label": "scam",
+          "max_similarity": 0.4477,
+          "novelty_score": 0.5523,
+          "model_b_prob": 0.6187
+        },
+        {
+          "sample_id": "p13_ml_hi_006",
+          "text": "\u092f\u0942\u091f\u094d\u092f\u0942\u092c \u0932\u093e\u0907\u0915 \u091c\u0949\u092c: \u0918\u0930 \u092c\u0948\u0920\u0947 \u092f\u0942\u091f\u094d\u092f\u0942\u092c \u0935\u0940\u0921\u093f\u092f\u094b \u0926\u0947\u0916\u0915\u0930 \u092a\u094d\u0930\u0924\u093f\u0926\u093f\u0928 \u0930\u0941 3...",
+          "label": "scam",
+          "max_similarity": 0.5297,
+          "novelty_score": 0.4703,
+          "model_b_prob": 0.5882
+        },
+        {
+          "sample_id": "p13_ml_hl_001",
+          "text": "Aapka SBI account suspend ho chuka hai. Re-activate karne ke...",
+          "label": "scam",
+          "max_similarity": 0.4882,
+          "novelty_score": 0.5118,
+          "model_b_prob": 0.5997
+        },
+        {
+          "sample_id": "p13_ml_hl_002",
+          "text": "Bijli vibhag notice: Aaj raat 9 baje power cut kar diya jaye...",
+          "label": "scam",
+          "max_similarity": 0.4676,
+          "novelty_score": 0.5324,
+          "model_b_prob": 0.6059
+        },
+        {
+          "sample_id": "p13_ml_hl_003",
+          "text": "Badhai ho! Aapne KBC lottery mein Rs 10,00,000 cash jeeta ha...",
+          "label": "scam",
+          "max_similarity": 0.563,
+          "novelty_score": 0.437,
+          "model_b_prob": 0.6067
+        },
+        {
+          "sample_id": "p13_ml_hl_004",
+          "text": "Aapka courier address incorrect hai. Delivery complete karne...",
+          "label": "scam",
+          "max_similarity": 0.5306,
+          "novelty_score": 0.4694,
+          "model_b_prob": 0.6276
+        },
+        {
+          "sample_id": "p13_ml_hl_005",
+          "text": "YouTube video ratings job: Daily Rs 2,500 direct bank transf...",
+          "label": "scam",
+          "max_similarity": 0.4732,
+          "novelty_score": 0.5268,
+          "model_b_prob": 0.6027
+        },
+        {
+          "sample_id": "p13_ml_hl_006",
+          "text": "Paytm KYC expired: Aapka wallet limit 0 kar diya jayega. Lin...",
+          "label": "scam",
+          "max_similarity": 0.4758,
+          "novelty_score": 0.5242,
+          "model_b_prob": 0.6508
+        }
+      ],
+      "known_non_scam": [
+        {
+          "sample_id": "p13_ts_hist_ham_001",
+          "text": "Hey mate, are we still meeting up for squash at 6 today? Let...",
+          "label": "non_scam",
+          "max_similarity": 0.4962,
+          "novelty_score": 0.5038,
+          "model_b_prob": 0.5241
+        },
+        {
+          "sample_id": "p13_ts_hist_ham_002",
+          "text": "Can you pick up some milk and bread on your way home from wo...",
+          "label": "non_scam",
+          "max_similarity": 0.5024,
+          "novelty_score": 0.4976,
+          "model_b_prob": 0.4888
+        },
+        {
+          "sample_id": "p13_ts_hl_ham_001",
+          "text": "Aapka Amazon package deliver ho gaya hai. Security guard ke ...",
+          "label": "non_scam",
+          "max_similarity": 0.4525,
+          "novelty_score": 0.5475,
+          "model_b_prob": 0.4735
+        },
+        {
+          "sample_id": "p13_ts_hl_ham_002",
+          "text": "Bhai office kab tak pahunch raha hai? Presentation 11 baje s...",
+          "label": "non_scam",
+          "max_similarity": 0.551,
+          "novelty_score": 0.449,
+          "model_b_prob": 0.4744
+        },
+        {
+          "sample_id": "p13_ts_hl_ham_003",
+          "text": "Aapka electricity bill payment Rs 2,150 safal raha. Consumer...",
+          "label": "non_scam",
+          "max_similarity": 0.4458,
+          "novelty_score": 0.5542,
+          "model_b_prob": 0.4125
+        },
+        {
+          "sample_id": "p13_ts_hi_ham_001",
+          "text": "\u092a\u094d\u0930\u093f\u092f \u0917\u094d\u0930\u093e\u0939\u0915, \u0906\u092a\u0915\u0947 \u092c\u0948\u0902\u0915 \u0916\u093e\u0924\u0947 **3456 \u092e\u0947\u0902 \u0930\u0941 10,000 \u091c\u092e\u093e \u0915\u093f\u090f \u0917\u090f...",
+          "label": "non_scam",
+          "max_similarity": 0.4521,
+          "novelty_score": 0.5479,
+          "model_b_prob": 0.4951
+        },
+        {
+          "sample_id": "p13_ts_hi_ham_002",
+          "text": "\u0926\u093f\u0932\u094d\u0932\u0940 \u091c\u0932 \u092c\u094b\u0930\u094d\u0921: \u0909\u092a\u092d\u094b\u0915\u094d\u0924\u093e \u0938\u0902\u0916\u094d\u092f\u093e 90218 \u0915\u093e \u091c\u0932 \u092c\u093f\u0932 \u0930\u0941 450 \u0938\u092b\u0932\u0924...",
+          "label": "non_scam",
+          "max_similarity": 0.5509,
+          "novelty_score": 0.4491,
+          "model_b_prob": 0.4552
+        },
+        {
+          "sample_id": "p13_ts_hi_ham_003",
+          "text": "\u0928\u092e\u0938\u094d\u0924\u0947 \u091a\u093e\u091a\u0940 \u091c\u0940, \u0906\u0936\u093e \u0939\u0948 \u0906\u092a \u0938\u092c \u0938\u0915\u0941\u0936\u0932 \u0939\u0948\u0902\u0964 \u0915\u0932 \u0936\u093e\u092e \u0939\u092e \u0938\u092c \u0918\u0930 \u092a\u0930 \u092e...",
+          "label": "non_scam",
+          "max_similarity": 0.4861,
+          "novelty_score": 0.5139,
+          "model_b_prob": 0.4621
+        },
+        {
+          "sample_id": "p13_hn_001",
+          "text": "Your OTP for HDFC Bank Credit Card transaction of Rs 4,999 a...",
+          "label": "non_scam",
+          "max_similarity": 0.4659,
+          "novelty_score": 0.5341,
+          "model_b_prob": 0.4834
+        },
+        {
+          "sample_id": "p13_hn_002",
+          "text": "Dear SBI Customer, your NetBanking password was changed succ...",
+          "label": "non_scam",
+          "max_similarity": 0.4137,
+          "novelty_score": 0.5863,
+          "model_b_prob": 0.431
+        },
+        {
+          "sample_id": "p13_hn_003",
+          "text": "URGENT: Indigo Flight 6E-512 from Mumbai to Bengaluru has be...",
+          "label": "non_scam",
+          "max_similarity": 0.4791,
+          "novelty_score": 0.5209,
+          "model_b_prob": 0.47
+        },
+        {
+          "sample_id": "p13_hn_004",
+          "text": "Aadhaar OTP: 491028 is your one time password to verify mobi...",
+          "label": "non_scam",
+          "max_similarity": 0.4806,
+          "novelty_score": 0.5194,
+          "model_b_prob": 0.4931
+        },
+        {
+          "sample_id": "p13_hn_005",
+          "text": "Your ICICI Bank account balance has fallen below minimum req...",
+          "label": "non_scam",
+          "max_similarity": 0.4363,
+          "novelty_score": 0.5637,
+          "model_b_prob": 0.4827
+        },
+        {
+          "sample_id": "p13_hn_006",
+          "text": "Income Tax Department: Last date to file ITR without late fe...",
+          "label": "non_scam",
+          "max_similarity": 0.314,
+          "novelty_score": 0.686,
+          "model_b_prob": 0.538
+        },
+        {
+          "sample_id": "p13_hn_007",
+          "text": "Electricity Alert: Scheduled maintenance outage in Indiranag...",
+          "label": "non_scam",
+          "max_similarity": 0.3367,
+          "novelty_score": 0.6633,
+          "model_b_prob": 0.5045
+        },
+        {
+          "sample_id": "p13_hn_008",
+          "text": "Traffic Police Notice: Traffic challan #DL891238 of Rs 1,000...",
+          "label": "non_scam",
+          "max_similarity": 0.4148,
+          "novelty_score": 0.5852,
+          "model_b_prob": 0.54
+        },
+        {
+          "sample_id": "p13_hn_009",
+          "text": "Your Swiggy Instamart delivery of groceries is arriving in 8...",
+          "label": "non_scam",
+          "max_similarity": 0.4291,
+          "novelty_score": 0.5709,
+          "model_b_prob": 0.4387
+        },
+        {
+          "sample_id": "p13_hn_010",
+          "text": "Hospital Alert: Your blood test results from Lal PathLabs ar...",
+          "label": "non_scam",
+          "max_similarity": 0.395,
+          "novelty_score": 0.605,
+          "model_b_prob": 0.5459
+        },
+        {
+          "sample_id": "p13_hn_011",
+          "text": "Domino's Pizza: Flash deal! Flat 50% OFF on all gourmet pizz...",
+          "label": "non_scam",
+          "max_similarity": 0.4031,
+          "novelty_score": 0.5969,
+          "model_b_prob": 0.4695
+        },
+        {
+          "sample_id": "p13_hn_012",
+          "text": "IRCTC Refund Notice: Refund of Rs 1,840 for cancelled train ...",
+          "label": "non_scam",
+          "max_similarity": 0.4429,
+          "novelty_score": 0.5571,
+          "model_b_prob": 0.4857
+        },
+        {
+          "sample_id": "p13_hn_013",
+          "text": "Job Application Update: Google India has shortlisted your pr...",
+          "label": "non_scam",
+          "max_similarity": 0.4179,
+          "novelty_score": 0.5821,
+          "model_b_prob": 0.5387
+        },
+        {
+          "sample_id": "p13_hn_014",
+          "text": "Amazon Security Alert: New login detected from Chrome on Win...",
+          "label": "non_scam",
+          "max_similarity": 0.3572,
+          "novelty_score": 0.6428,
+          "model_b_prob": 0.4927
+        },
+        {
+          "sample_id": "p13_hn_015",
+          "text": "Salary credited: Net pay Rs 92,400 credited to a/c **9012 by...",
+          "label": "non_scam",
+          "max_similarity": 0.4658,
+          "novelty_score": 0.5342,
+          "model_b_prob": 0.415
+        },
+        {
+          "sample_id": "p13_hn_016",
+          "text": "Aapka SBI Debit Card PIN generate karne ka OTP 890123 hai. K...",
+          "label": "non_scam",
+          "max_similarity": 0.4567,
+          "novelty_score": 0.5433,
+          "model_b_prob": 0.5333
+        },
+        {
+          "sample_id": "p13_hn_017",
+          "text": "Aapka electricity connection maintenance ke kaaran kal dopah...",
+          "label": "non_scam",
+          "max_similarity": 0.5152,
+          "novelty_score": 0.4848,
+          "model_b_prob": 0.5313
+        },
+        {
+          "sample_id": "p13_hn_018",
+          "text": "Zomato refund update: Order cancellation refund Rs 420 aapke...",
+          "label": "non_scam",
+          "max_similarity": 0.4123,
+          "novelty_score": 0.5877,
+          "model_b_prob": 0.4994
+        },
+        {
+          "sample_id": "p13_hn_019",
+          "text": "Aapka driving license renew karne ka application verify ho c...",
+          "label": "non_scam",
+          "max_similarity": 0.4396,
+          "novelty_score": 0.5604,
+          "model_b_prob": 0.5453
+        },
+        {
+          "sample_id": "p13_hn_020",
+          "text": "Bhai urgently call back kar, papa ki report lekar doctor ke ...",
+          "label": "non_scam",
+          "max_similarity": 0.5267,
+          "novelty_score": 0.4733,
+          "model_b_prob": 0.4947
+        },
+        {
+          "sample_id": "p13_hn_021",
+          "text": "\u0906\u092f\u0915\u0930 \u0935\u093f\u092d\u093e\u0917 \u0938\u0942\u091a\u0928\u093e: \u0906\u092a\u0915\u093e \u0915\u0930 \u0930\u093f\u092b\u0902\u0921 \u0930\u0941 12,400 \u0938\u092b\u0932\u0924\u093e\u092a\u0942\u0930\u094d\u0935\u0915 \u0906\u092a\u0915\u0947 \u092c...",
+          "label": "non_scam",
+          "max_similarity": 0.4815,
+          "novelty_score": 0.5185,
+          "model_b_prob": 0.5231
+        },
+        {
+          "sample_id": "p13_hn_022",
+          "text": "\u090f\u0938\u092c\u0940\u0906\u0908 \u0938\u0941\u0930\u0915\u094d\u0937\u093e \u0938\u0942\u091a\u0928\u093e: \u0906\u092a\u0915\u0947 \u0928\u0947\u091f\u092c\u0948\u0902\u0915\u093f\u0902\u0917 \u0915\u093e \u092a\u093e\u0938\u0935\u0930\u094d\u0921 \u092c\u0926\u0932 \u0926\u093f\u092f\u093e \u0917\u092f...",
+          "label": "non_scam",
+          "max_similarity": 0.4241,
+          "novelty_score": 0.5759,
+          "model_b_prob": 0.4889
+        },
+        {
+          "sample_id": "p13_hn_023",
+          "text": "\u0935\u093f\u0926\u094d\u092f\u0941\u0924 \u0935\u093f\u092d\u093e\u0917 \u0938\u0942\u091a\u0928\u093e: \u0906\u092a\u0915\u0947 \u0915\u094d\u0937\u0947\u0924\u094d\u0930 \u092e\u0947\u0902 \u0915\u0932 \u0938\u0941\u092c\u0939 10 \u0938\u0947 12 \u092c\u091c\u0947 \u0924...",
+          "label": "non_scam",
+          "max_similarity": 0.4597,
+          "novelty_score": 0.5403,
+          "model_b_prob": 0.5593
+        },
+        {
+          "sample_id": "p13_hn_024",
+          "text": "\u0906\u0927\u093e\u0930 \u092a\u094d\u0930\u092e\u093e\u0923\u0940\u0915\u0930\u0923 \u0913\u091f\u0940\u092a\u0940 819203 \u0939\u0948\u0964 \u0907\u0938\u0915\u093e \u0909\u092a\u092f\u094b\u0917 \u0905\u092a\u0928\u0947 \u092a\u0924\u0947 \u0915\u0947 \u0938\u0924\u094d\u092f...",
+          "label": "non_scam",
+          "max_similarity": 0.5229,
+          "novelty_score": 0.4771,
+          "model_b_prob": 0.5158
+        },
+        {
+          "sample_id": "p13_hn_025",
+          "text": "\u0906\u0908\u0906\u0930\u0938\u0940\u091f\u0940\u0938\u0940: \u091f\u094d\u0930\u0947\u0928 \u0938\u0902\u0916\u094d\u092f\u093e 12423 \u0930\u093e\u091c\u0927\u093e\u0928\u0940 \u090f\u0915\u094d\u0938\u092a\u094d\u0930\u0947\u0938 \u0915\u0947 \u0938\u092e\u092f \u092e\u0947\u0902 ...",
+          "label": "non_scam",
+          "max_similarity": 0.4587,
+          "novelty_score": 0.5413,
+          "model_b_prob": 0.4525
+        },
+        {
+          "sample_id": "p13_ml_hi_007",
+          "text": "\u092a\u094d\u0930\u093f\u092f \u0917\u094d\u0930\u093e\u0939\u0915, \u0906\u092a\u0915\u0947 \u092a\u0902\u091c\u093e\u092c \u0928\u0947\u0936\u0928\u0932 \u092c\u0948\u0902\u0915 \u0916\u093e\u0924\u0947 \u092e\u0947\u0902 \u0930\u0941 3,000 \u091c\u092e\u093e \u0939\u0941...",
+          "label": "non_scam",
+          "max_similarity": 0.4564,
+          "novelty_score": 0.5436,
+          "model_b_prob": 0.4976
+        },
+        {
+          "sample_id": "p13_ml_hi_008",
+          "text": "\u0926\u093f\u0932\u094d\u0932\u0940 \u0935\u093f\u0926\u094d\u092f\u0941\u0924 \u092c\u094b\u0930\u094d\u0921: \u092e\u093e\u0939 \u0938\u093f\u0924\u0902\u092c\u0930 \u0915\u093e \u092c\u093f\u091c\u0932\u0940 \u092c\u093f\u0932 \u0930\u0941 1,450 \u092a\u094d\u0930\u093e\u092a...",
+          "label": "non_scam",
+          "max_similarity": 0.5046,
+          "novelty_score": 0.4954,
+          "model_b_prob": 0.4403
+        },
+        {
+          "sample_id": "p13_ml_hi_009",
+          "text": "\u0906\u0908\u0906\u0930\u0938\u0940\u091f\u0940\u0938\u0940: \u091f\u094d\u0930\u0947\u0928 \u0938\u0902\u0916\u094d\u092f\u093e 12952, \u0915\u094b\u091a \u092c\u09403, \u0938\u0940\u091f 21 \u092c\u0941\u0915 \u0939\u094b \u091a\u0941\u0915\u0940 ...",
+          "label": "non_scam",
+          "max_similarity": 0.4982,
+          "novelty_score": 0.5018,
+          "model_b_prob": 0.4306
+        },
+        {
+          "sample_id": "p13_ml_hi_010",
+          "text": "\u0906\u0927\u093e\u0930 \u0913\u091f\u0940\u092a\u0940 492019 \u0939\u0948\u0964 \u0907\u0938\u0915\u093e \u092a\u094d\u0930\u092f\u094b\u0917 \u0915\u0947\u0935\u0932 \u092f\u0942\u0906\u0908\u0921\u0940\u090f\u0906\u0908 \u0915\u0940 \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915...",
+          "label": "non_scam",
+          "max_similarity": 0.5082,
+          "novelty_score": 0.4918,
+          "model_b_prob": 0.5177
+        },
+        {
+          "sample_id": "p13_ml_hi_011",
+          "text": "\u0928\u092e\u0938\u094d\u0924\u0947 \u092d\u093e\u0908, \u092e\u093e\u0902 \u0915\u0940 \u0924\u092c\u0940\u092f\u0924 \u0905\u092c \u092a\u0939\u0932\u0947 \u0938\u0947 \u092c\u0947\u0939\u0924\u0930 \u0939\u0948\u0964 \u0915\u0932 \u0936\u093e\u092e \u0915\u094b \u0918\u0930 \u0906...",
+          "label": "non_scam",
+          "max_similarity": 0.4579,
+          "novelty_score": 0.5421,
+          "model_b_prob": 0.5179
+        },
+        {
+          "sample_id": "p13_ml_hi_012",
+          "text": "\u0905\u092e\u0947\u091c\u093c\u0928 \u0921\u093f\u0932\u0940\u0935\u0930\u0940: \u0906\u092a\u0915\u093e \u0911\u0930\u094d\u0921\u0930 \u0906\u091c \u0936\u093e\u092e 6 \u092c\u091c\u0947 \u0924\u0915 \u0906\u092a\u0915\u0947 \u092a\u0924\u0947 \u092a\u0930 \u092a\u0939\u0941\u0902\u091a...",
+          "label": "non_scam",
+          "max_similarity": 0.4867,
+          "novelty_score": 0.5133,
+          "model_b_prob": 0.5269
+        },
+        {
+          "sample_id": "p13_ml_hl_007",
+          "text": "Aapka SBI savings a/c **9012 se Rs 2,400 debit hua hai at Bi...",
+          "label": "non_scam",
+          "max_similarity": 0.4528,
+          "novelty_score": 0.5472,
+          "model_b_prob": 0.4779
+        },
+        {
+          "sample_id": "p13_ml_hl_008",
+          "text": "Aapka Swiggy order confirm ho gaya hai aur 20 minute mein de...",
+          "label": "non_scam",
+          "max_similarity": 0.4697,
+          "novelty_score": 0.5303,
+          "model_b_prob": 0.4119
+        },
+        {
+          "sample_id": "p13_ml_hl_009",
+          "text": "Aapka electricity bill payment Rs 1,890 successfully complet...",
+          "label": "non_scam",
+          "max_similarity": 0.4442,
+          "novelty_score": 0.5558,
+          "model_b_prob": 0.461
+        },
+        {
+          "sample_id": "p13_ml_hl_010",
+          "text": "Aapka Jio recharge Rs 299 successfully activate ho gaya hai....",
+          "label": "non_scam",
+          "max_similarity": 0.4235,
+          "novelty_score": 0.5765,
+          "model_b_prob": 0.415
+        },
+        {
+          "sample_id": "p13_ml_hl_011",
+          "text": "Bhai kal shaam ko movie chalte hain kya? Ticket book kar rah...",
+          "label": "non_scam",
+          "max_similarity": 0.5154,
+          "novelty_score": 0.4846,
+          "model_b_prob": 0.4391
+        },
+        {
+          "sample_id": "p13_ml_hl_012",
+          "text": "Aapka Uber OTP 6712 hai. Driver ke saath share karein ride s...",
+          "label": "non_scam",
+          "max_similarity": 0.4602,
+          "novelty_score": 0.5398,
+          "model_b_prob": 0.5297
+        }
+      ],
+      "unknown_scam": [
+        {
+          "sample_id": "p13_ts_novel_scam_001",
+          "text": "URGENT: Mom, my phone got stolen and I'm detained at police ...",
+          "label": "scam",
+          "max_similarity": 0.4714,
+          "novelty_score": 0.5286,
+          "model_b_prob": 0.5443
+        },
+        {
+          "sample_id": "p13_ts_novel_scam_002",
+          "text": "MetaMask Security Warning: A critical vulnerability was foun...",
+          "label": "scam",
+          "max_similarity": 0.3716,
+          "novelty_score": 0.6284,
+          "model_b_prob": 0.5985
+        },
+        {
+          "sample_id": "p13_ts_novel_scam_003",
+          "text": "FedEx Customs Interception: Narcotic parcel containing 120g ...",
+          "label": "scam",
+          "max_similarity": 0.4313,
+          "novelty_score": 0.5687,
+          "model_b_prob": 0.55
+        },
+        {
+          "sample_id": "p13_nov_001",
+          "text": "MOM HELP: I got into a terrible car accident in Connaught Pl...",
+          "label": "scam",
+          "max_similarity": 0.4269,
+          "novelty_score": 0.5731,
+          "model_b_prob": 0.5323
+        },
+        {
+          "sample_id": "p13_nov_002",
+          "text": "Dad, my bag with phone and wallet got snatched at Mumbai cen...",
+          "label": "scam",
+          "max_similarity": 0.5254,
+          "novelty_score": 0.4746,
+          "model_b_prob": 0.5422
+        },
+        {
+          "sample_id": "p13_nov_003",
+          "text": "DIGITAL ARREST ORDER: Directorate of Enforcement summons you...",
+          "label": "scam",
+          "max_similarity": 0.3887,
+          "novelty_score": 0.6113,
+          "model_b_prob": 0.5486
+        },
+        {
+          "sample_id": "p13_nov_004",
+          "text": "Supreme Court Cyber Tribunal: Non-bailable arrest warrant is...",
+          "label": "scam",
+          "max_similarity": 0.3826,
+          "novelty_score": 0.6174,
+          "model_b_prob": 0.525
+        },
+        {
+          "sample_id": "p13_nov_005",
+          "text": "Web3 Airdrop: Claim 2,500 ARB governance tokens before claim...",
+          "label": "scam",
+          "max_similarity": 0.4539,
+          "novelty_score": 0.5461,
+          "model_b_prob": 0.5689
+        },
+        {
+          "sample_id": "p13_nov_006",
+          "text": "Uniswap V3 Flash Liquidity Alert: 500% APY available on USDC...",
+          "label": "scam",
+          "max_similarity": 0.3891,
+          "novelty_score": 0.6109,
+          "model_b_prob": 0.5189
+        },
+        {
+          "sample_id": "p13_nov_007",
+          "text": "Telegram Task VIP Group: You have completed Trial Level 1! T...",
+          "label": "scam",
+          "max_similarity": 0.4396,
+          "novelty_score": 0.5604,
+          "model_b_prob": 0.5344
+        },
+        {
+          "sample_id": "p13_nov_008",
+          "text": "Movie Ticket Rating Scam: Earn Rs 400 per review for upcomin...",
+          "label": "scam",
+          "max_similarity": 0.5157,
+          "novelty_score": 0.4843,
+          "model_b_prob": 0.5221
+        },
+        {
+          "sample_id": "p13_nov_009",
+          "text": "Customs Detention: Courier #DHL89201 from Netherlands interc...",
+          "label": "scam",
+          "max_similarity": 0.3756,
+          "novelty_score": 0.6244,
+          "model_b_prob": 0.5514
+        },
+        {
+          "sample_id": "p13_nov_010",
+          "text": "CBI Special Crime Unit: Illegal passport forgery syndicate l...",
+          "label": "scam",
+          "max_similarity": 0.4574,
+          "novelty_score": 0.5426,
+          "model_b_prob": 0.5759
+        },
+        {
+          "sample_id": "p13_nov_011",
+          "text": "AI Deepfake Video Extortion: We have created a compromising ...",
+          "label": "scam",
+          "max_similarity": 0.4416,
+          "novelty_score": 0.5584,
+          "model_b_prob": 0.5379
+        },
+        {
+          "sample_id": "p13_nov_012",
+          "text": "Solar Rooftop Subsidy: PM Surya Ghar Yojana subsidy of Rs 78...",
+          "label": "scam",
+          "max_similarity": 0.3701,
+          "novelty_score": 0.6299,
+          "model_b_prob": 0.5933
+        },
+        {
+          "sample_id": "p13_nov_013",
+          "text": "FASTag Blacklist Alert: Your NHAI FASTag wallet has insuffic...",
+          "label": "scam",
+          "max_similarity": 0.3905,
+          "novelty_score": 0.6095,
+          "model_b_prob": 0.5392
+        },
+        {
+          "sample_id": "p13_nov_014",
+          "text": "Challan Lok Adalat Waiver: 80% discount on pending traffic p...",
+          "label": "scam",
+          "max_similarity": 0.4032,
+          "novelty_score": 0.5968,
+          "model_b_prob": 0.5421
+        },
+        {
+          "sample_id": "p13_nov_015",
+          "text": "WhatsApp Pink Update: Download official WhatsApp Pink theme ...",
+          "label": "scam",
+          "max_similarity": 0.4823,
+          "novelty_score": 0.5177,
+          "model_b_prob": 0.5742
+        },
+        {
+          "sample_id": "p13_nov_016",
+          "text": "E-SIM Conversion Alert: Your physical SIM will be deactivate...",
+          "label": "scam",
+          "max_similarity": 0.4663,
+          "novelty_score": 0.5337,
+          "model_b_prob": 0.5463
+        }
+      ],
+      "unknown_non_scam": []
+    }
+  },
+  "error_analysis": [
+    {
+      "sample_id": "p13_ts_hist_scam_003",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.4865,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "reward_claim"
+      ],
+      "semantic_similarity": 0.8267,
+      "novelty": 0.1733,
+      "failure_type": "false_negative",
+      "likely_reason": "subtle_pretext_without_strong_lexical_cues",
+      "text_snippet": "FREE ringtone! Text YES to 8007 to receive your polyphonic tune. 1.50 per week s..."
+    },
+    {
+      "sample_id": "p13_ts_ind_scam_001",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5248,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "account_suspension",
+        "link_redirection"
+      ],
+      "semantic_similarity": 0.4782,
+      "novelty": 0.5218,
+      "failure_type": "false_negative",
+      "likely_reason": "subtle_pretext_without_strong_lexical_cues",
+      "text_snippet": "Dear PNB Customer, your NetBanking user ID has been disabled. Visit http://pnb-o..."
+    },
+    {
+      "sample_id": "p13_ts_obf_scam_003",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5364,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "fear_creation",
+        "remote_access_request"
+      ],
+      "semantic_similarity": 0.3805,
+      "novelty": 0.6195,
+      "failure_type": "false_negative",
+      "likely_reason": "syntactic_obfuscation_evasion",
+      "text_snippet": "HDFC Bank: Suspicious charge of Rs 40,000. D.o.w.n.l.o.a.d AnyDesk to reverse tr..."
+    },
+    {
+      "sample_id": "p13_ts_novel_scam_001",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5443,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "authority_claim",
+        "threat",
+        "urgency",
+        "payment_request"
+      ],
+      "semantic_similarity": 0.4714,
+      "novelty": 0.5286,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "URGENT: Mom, my phone got stolen and I'm detained at police station! Please UPI ..."
+    },
+    {
+      "sample_id": "p13_ts_novel_scam_003",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.55,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "authority_claim",
+        "threat",
+        "fear_creation"
+      ],
+      "semantic_similarity": 0.4313,
+      "novelty": 0.5687,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "FedEx Customs Interception: Narcotic parcel containing 120g MDMA intercepted und..."
+    },
+    {
+      "sample_id": "p13_hn_023",
+      "ground_truth": "non_scam",
+      "prediction": "scam",
+      "model_confidence": 0.5593,
+      "language": "hi",
+      "script": "Devanagari",
+      "tactics": [],
+      "semantic_similarity": 0.4597,
+      "novelty": 0.5403,
+      "failure_type": "false_positive",
+      "likely_reason": "legitimate_urgent_banking_wording",
+      "text_snippet": "\u0935\u093f\u0926\u094d\u092f\u0941\u0924 \u0935\u093f\u092d\u093e\u0917 \u0938\u0942\u091a\u0928\u093e: \u0906\u092a\u0915\u0947 \u0915\u094d\u0937\u0947\u0924\u094d\u0930 \u092e\u0947\u0902 \u0915\u0932 \u0938\u0941\u092c\u0939 10 \u0938\u0947 12 \u092c\u091c\u0947 \u0924\u0915 \u091f\u094d\u0930\u093e\u0902\u0938\u092b\u093e\u0930\u094d\u092e\u0930 \u092e\u0930\u092e\u094d\u092e..."
+    },
+    {
+      "sample_id": "p13_nov_001",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5323,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "authority_claim",
+        "threat",
+        "urgency",
+        "payment_request"
+      ],
+      "semantic_similarity": 0.4269,
+      "novelty": 0.5731,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "MOM HELP: I got into a terrible car accident in Connaught Place! Police inspecto..."
+    },
+    {
+      "sample_id": "p13_nov_002",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5422,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "impersonation",
+        "urgency",
+        "payment_request"
+      ],
+      "semantic_similarity": 0.5254,
+      "novelty": 0.4746,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "Dad, my bag with phone and wallet got snatched at Mumbai central station. Send R..."
+    },
+    {
+      "sample_id": "p13_nov_003",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5486,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "authority_claim",
+        "threat",
+        "fear_creation"
+      ],
+      "semantic_similarity": 0.3887,
+      "novelty": 0.6113,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "DIGITAL ARREST ORDER: Directorate of Enforcement summons you for illegal cryptoc..."
+    },
+    {
+      "sample_id": "p13_nov_004",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.525,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "authority_claim",
+        "threat",
+        "fear_creation",
+        "urgency"
+      ],
+      "semantic_similarity": 0.3826,
+      "novelty": 0.6174,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "Supreme Court Cyber Tribunal: Non-bailable arrest warrant issued against phone 9..."
+    },
+    {
+      "sample_id": "p13_nov_006",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5189,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "reward_claim",
+        "urgency",
+        "link_redirection"
+      ],
+      "semantic_similarity": 0.3891,
+      "novelty": 0.6109,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "Uniswap V3 Flash Liquidity Alert: 500% APY available on USDC-ETH pool for next 2..."
+    },
+    {
+      "sample_id": "p13_nov_007",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5344,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "job_offer",
+        "payment_request"
+      ],
+      "semantic_similarity": 0.4396,
+      "novelty": 0.5604,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "Telegram Task VIP Group: You have completed Trial Level 1! To unlock Level 2 hig..."
+    },
+    {
+      "sample_id": "p13_nov_008",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5221,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "job_offer",
+        "link_redirection"
+      ],
+      "semantic_similarity": 0.5157,
+      "novelty": 0.4843,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "Movie Ticket Rating Scam: Earn Rs 400 per review for upcoming Bollywood releases..."
+    },
+    {
+      "sample_id": "p13_nov_011",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5379,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "threat",
+        "fear_creation",
+        "urgency",
+        "payment_request"
+      ],
+      "semantic_similarity": 0.4416,
+      "novelty": 0.5584,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "AI Deepfake Video Extortion: We have created a compromising AI video of you usin..."
+    },
+    {
+      "sample_id": "p13_nov_013",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5392,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "threat",
+        "urgency",
+        "link_redirection"
+      ],
+      "semantic_similarity": 0.3905,
+      "novelty": 0.6095,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "FASTag Blacklist Alert: Your NHAI FASTag wallet has insufficient balance and wil..."
+    },
+    {
+      "sample_id": "p13_nov_014",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5421,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "reward_claim",
+        "urgency",
+        "link_redirection"
+      ],
+      "semantic_similarity": 0.4032,
+      "novelty": 0.5968,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "Challan Lok Adalat Waiver: 80% discount on pending traffic police challans today..."
+    },
+    {
+      "sample_id": "p13_nov_016",
+      "ground_truth": "scam",
+      "prediction": "non_scam",
+      "model_confidence": 0.5463,
+      "language": "en",
+      "script": "Latin",
+      "tactics": [
+        "threat",
+        "fear_creation",
+        "urgency"
+      ],
+      "semantic_similarity": 0.4663,
+      "novelty": 0.5337,
+      "failure_type": "false_negative",
+      "likely_reason": "novel_threat_vocabulary_divergence",
+      "text_snippet": "E-SIM Conversion Alert: Your physical SIM will be deactivated and converted to e..."
+    }
+  ]
+}

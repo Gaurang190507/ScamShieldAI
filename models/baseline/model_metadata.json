@@ -1,0 +1,37 @@
+{
+  "model_name": "ScamShield Phase 3 baseline text classifier",
+  "description": "Text-only TF-IDF + Logistic Regression baseline trained on UCI SMS Spam Collection",
+  "timestamp_utc": "2026-10-02T06:36:49.891102+00:00",
+  "random_state": 42,
+  "dataset_source": "C:\\Users\\radika\\OneDrive\\Desktop\\ScamShieldAI\\data\\processed\\preprocessed\\uci_sms_spam.jsonl",
+  "dataset_samples": 5574,
+  "split_counts": {
+    "train": 3881,
+    "validation": 837,
+    "test": 856
+  },
+  "tfidf_hyperparameters": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.9,
+    "sublinear_tf": true,
+    "strip_accents": "unicode"
+  },
+  "vocabulary_size": 10637,
+  "logistic_regression_hyperparameters": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "selected_threshold": 0.3,
+  "default_threshold": 0.5,
+  "threshold_selection_criterion": "highest scam F1-score on validation set",
+  "library_versions": {
+    "sklearn": "1.9.1",
+    "joblib": "1.6.0"
+  }
+}

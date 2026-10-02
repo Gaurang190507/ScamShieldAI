@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_rbi_financial_safety",
+  "title": "Reserve Bank of India (RBI) BE(A)WARE: Financial Fraud Modus Operandi & Mitigation",
+  "source": "Reserve Bank of India (RBI)",
+  "source_type": "official_knowledge",
+  "publication_date": "2023-03-07",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "IN",
+  "topic": "banking_and_financial_fraud",
+  "license_status": "reference_advisory_excerpt",
+  "content": "The Reserve Bank of India educational booklet 'BE(A)WARE' compiles standard financial fraud mechanisms and consumer protection guidelines. Core principles include:\n\n1. UPI & QR Code Transaction Fundamentals:\nScammers exploit public confusion regarding the directional nature of Unified Payments Interface (UPI) operations. Key rule: A QR code or UPI PIN is required ONLY to SEND money (debit). You NEVER need to scan a QR code or enter a UPI PIN to RECEIVE money (credit). Fraudsters posting on marketplace sites (OLX, Quikr) or sending tax refund notices instruct victims to 'Scan this QR code to accept Rs. 10,000'. In reality, scanning prompts a collect request that debits the victim's account.\n\n2. Confidential Credentials & Non-Disclosure:\nBanks, financial institutions, and payment gateways NEVER ask for confidential credentials including: PIN, CVV, OTP, UPI MPIN, passwords, or card expiry dates. Official communications never require users to share OTPs over phone calls, SMS, or third-party web forms. Any communication stating 'Share OTP to confirm cancellation of unauthorized transaction' is fraudulent.\n\n3. Fictitious Offers & Lottery Prizes:\nFraudsters send emails or SMS announcing lottery prizes, customs clearance funds, or inheritance payouts (e.g., KBC Lottery, RBI Fund Release). Victims are asked to deposit 'advance fees', 'statutory currency conversion charges', or 'processing fees'. RBI clarifies that it never holds foreign currency accounts of individuals or charges fees to release individual lottery funds."
+}

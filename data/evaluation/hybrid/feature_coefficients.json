@@ -1,0 +1,127 @@
+[
+  {
+    "feature": "has_url",
+    "coefficient": 1.6793,
+    "abs_magnitude": 1.6793
+  },
+  {
+    "feature": "url_count",
+    "coefficient": 1.6793,
+    "abs_magnitude": 1.6793
+  },
+  {
+    "feature": "max_hostname_length",
+    "coefficient": 0.7526,
+    "abs_magnitude": 0.7526
+  },
+  {
+    "feature": "max_subdomain_depth",
+    "coefficient": 0.751,
+    "abs_magnitude": 0.751
+  },
+  {
+    "feature": "max_url_length",
+    "coefficient": 0.7315,
+    "abs_magnitude": 0.7315
+  },
+  {
+    "feature": "max_url_risk_score",
+    "coefficient": 0.2254,
+    "abs_magnitude": 0.2254
+  },
+  {
+    "feature": "mean_url_risk_score",
+    "coefficient": 0.2254,
+    "abs_magnitude": 0.2254
+  },
+  {
+    "feature": "has_insecure_http",
+    "coefficient": 0.2254,
+    "abs_magnitude": 0.2254
+  },
+  {
+    "feature": "max_query_parameter_count",
+    "coefficient": 0.0269,
+    "abs_magnitude": 0.0269
+  },
+  {
+    "feature": "has_unusual_scheme",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_userinfo_present",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_ip_based_hostname",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_plain_http_sensitive",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_unusual_port",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_excessive_subdomain_depth",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_punycode_hostname",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_suspicious_path_keywords",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_suspicious_query_parameters",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_known_shortener",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_non_ascii_hostname",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_excessive_url_length",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "has_excessive_percent_encoding",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "max_percent_encoded_count",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "ip_url_count",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  },
+  {
+    "feature": "shortener_url_count",
+    "coefficient": 0.0,
+    "abs_magnitude": 0.0
+  }
+]

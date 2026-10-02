@@ -1,0 +1,24 @@
+{
+  "risk_level_counts": {
+    "low": 100,
+    "unknown": 8
+  },
+  "risk_level_percentages": {
+    "low": 92.59,
+    "unknown": 7.41
+  },
+  "score_statistics": {
+    "mean": 0.0065,
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.05,
+    "std": 0.0168
+  },
+  "threshold_bands": {
+    "low_0.00_to_0.24": 100,
+    "moderate_0.25_to_0.49": 0,
+    "high_0.50_to_0.74": 0,
+    "very_high_0.75_to_1.00": 0,
+    "unknown_malformed": 8
+  }
+}

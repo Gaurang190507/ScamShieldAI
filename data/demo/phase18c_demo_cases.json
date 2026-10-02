@@ -1,0 +1,82 @@
+[
+  {
+    "case_id": "demo_01_bank_phishing",
+    "title": "State Bank of India KYC Suspension Phishing",
+    "input_type": "text",
+    "input": "URGENT: Your SBI Account #4829 has been suspended due to incomplete KYC verification. Please click https://sbi-kyc-verify-portal.top to complete Aadhaar linking immediately to avoid permanent deactivation.",
+    "expected_behavior": "Should flag as high-risk scam or suspicious, isolating authority impersonation, financial urgency, and credential harvesting tactics alongside passive URL structural flags for suspicious TLD (.top).",
+    "purpose": "Demonstrates detection of high-impact Indian banking impersonation and coercive urgency."
+  },
+  {
+    "case_id": "demo_02_echallan_traffic",
+    "title": "Traffic Police E-Challan Threat Phishing",
+    "input_type": "text",
+    "input": "Notice: Pending traffic challan of Rs 1500 issued for vehicle DL-8C-AA-1234. Pay within 24 hours at http://echallan-parivahan-pay.cc to avoid vehicle impound and court summons.",
+    "expected_behavior": "Should identify legal coercion, financial deadline, and authority impersonation tactics. URL analysis identifies suspicious TLD (.cc) and brand mismatch.",
+    "purpose": "Demonstrates detection of legal coercion and fake government fine scams."
+  },
+  {
+    "case_id": "demo_03_job_offer_task",
+    "title": "Work-From-Home YouTube Like & Earn Scam",
+    "input_type": "text",
+    "input": "Congratulations! You have been selected for part-time online rating job. Earn Rs 3,000 to Rs 8,000 daily just by liking YouTube videos and rating hotels on Google. Contact HR Pooja on Telegram: https://t.me/GlobalRatingsHR to receive your daily payout.",
+    "expected_behavior": "Should detect financial lure, off-platform communication (Telegram), and zero-effort high-return job scam patterns.",
+    "purpose": "Demonstrates identification of task-based advance-fee work-from-home fraud."
+  },
+  {
+    "case_id": "demo_04_delivery_fee_phishing",
+    "title": "Courier Address Incomplete / Fee Phishing",
+    "input_type": "text",
+    "input": "India Post Alert: Your package #IN98214 cannot be dispatched due to invalid street address. Please update delivery details and pay Rs 25 re-delivery fee at http://indiapost-parcel-reschedule.xyz within 12 hours.",
+    "expected_behavior": "Should isolate delivery impersonation, nominal fee trap, and urgent delivery cutoff. Passive URL analyzer highlights suspicious TLD and hyphenated brand spoofing.",
+    "purpose": "Demonstrates detection of deceptive courier phishing campaigns targeting everyday parcel recipients."
+  },
+  {
+    "case_id": "demo_05_digital_arrest_coercion",
+    "title": "CBI / Customs Digital Arrest Coercive Scam",
+    "input_type": "text",
+    "input": "ATTENTION: This is Inspector Sharma from Cyber Crime Cell & CBI Headquarters. A parcel containing illegal narcotics and fake passports in your name was seized at Mumbai Customs. An immediate warrant is issued. Connect via Skype or WhatsApp within 10 minutes or local police will raid your premises.",
+    "expected_behavior": "Should isolate extreme psychological coercion, false law enforcement authority, and immediate arrest threats.",
+    "purpose": "Demonstrates detection of high-coercion digital arrest extortion patterns prevalent in India."
+  },
+  {
+    "case_id": "demo_06_legitimate_delivery_otp",
+    "title": "Legitimate E-Commerce Delivery Notification",
+    "input_type": "text",
+    "input": "Dear Customer, Your Amazon order #404-8912384 is out for delivery with our delivery partner Ramesh. Share OTP 849201 only when you physically receive your package. For tracking visit amazon.in.",
+    "expected_behavior": "Should be classified as likely non-scam or low-risk, leveraging Phase 17 delivery disambiguation rules to prevent false positives on legitimate delivery OTPs.",
+    "purpose": "Demonstrates false-positive resistance against authentic operational delivery notifications."
+  },
+  {
+    "case_id": "demo_07_legitimate_bank_alert",
+    "title": "Legitimate Bank Transaction Alert",
+    "input_type": "text",
+    "input": "Your A/C XX4921 is credited with Rs 45,000.00 on 02-Oct-26 via NEFT from ACME TECHNOLOGIES CORP. Available balance is Rs 82,410.50. Call 1800-425-3800 if not done by you.",
+    "expected_behavior": "Should evaluate to likely non-scam with low evidence of coercion, absence of external malicious links, and standard customer support helpline references.",
+    "purpose": "Demonstrates benign communication classification without spurious alerts."
+  },
+  {
+    "case_id": "demo_08_obfuscated_banking_scam",
+    "title": "Obfuscated Banking Phishing (Zero-Width & Leetspeak)",
+    "input_type": "text",
+    "input": "U.R.G.E.N.T: Y0ur H.D.F.C b@nk @cc0unt is suspended. Update KYC immediately: hxxp://hdfc-b@nk-kyc[.]net",
+    "expected_behavior": "Should trigger Phase 17 Obfuscation Normalizer, stripping leetspeak, punctuation separators, and defanged URL syntax before downstream feature extraction.",
+    "purpose": "Demonstrates adversarial evasion resistance and punctuation/leetspeak normalization."
+  },
+  {
+    "case_id": "demo_09_url_only_suspicious",
+    "title": "Raw Suspicious URL without Message Body",
+    "input_type": "url",
+    "input": "http://192.168.1.100:8080/secure/axis-netbanking/login.php?session=active",
+    "expected_behavior": "Routes to URL-only passive evaluation mode. Flags raw IP host, non-standard port 8080, and brand-in-path keyword spoofing without making outbound HTTP requests.",
+    "purpose": "Demonstrates 100% passive, offline structural analysis on standalone suspicious URLs."
+  },
+  {
+    "case_id": "demo_10_emerging_ai_investment",
+    "title": "Emerging AI Trading Bot & Crypto Syndicate Scam",
+    "input_type": "text",
+    "input": "VIP Invitation: Join the QuantAI Quantum Arbitrage syndicate. Automated institutional trading guarantees 4.5% daily return with zero risk. Early access closing for Indian investors: connect with our lead broker at https://quantum-arbitrage-desk.trade",
+    "expected_behavior": "Should flag as suspicious or emerging pattern in Semantic Memory & Novelty Detection, identifying high novelty score against historical SMS training corpora.",
+    "purpose": "Demonstrates Phase 7 novelty detection on novel investment schemes deviating from legacy spam clusters."
+  }
+]

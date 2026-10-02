@@ -1,0 +1,8 @@
+{
+  "model_type": "offline_semantic_dense_logistic_regression",
+  "embedder_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "threshold": 0.5,
+  "num_samples_trained": 55,
+  "offline_verified": true
+}

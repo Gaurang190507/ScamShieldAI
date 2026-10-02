@@ -1,0 +1,33 @@
+{
+  "total_samples": 5574,
+  "overall_distribution": {
+    "scam": 747,
+    "non_scam": 4827,
+    "scam_percentage": 13.4,
+    "non_scam_percentage": 86.6
+  },
+  "train": {
+    "count": 3881,
+    "percentage": 69.63,
+    "scam_count": 520,
+    "non_scam_count": 3361,
+    "scam_percentage": 13.4
+  },
+  "validation": {
+    "count": 837,
+    "percentage": 15.02,
+    "scam_count": 104,
+    "non_scam_count": 733,
+    "scam_percentage": 12.43
+  },
+  "test": {
+    "count": 856,
+    "percentage": 15.36,
+    "scam_count": 123,
+    "non_scam_count": 733,
+    "scam_percentage": 14.37
+  },
+  "leakage_verification": "Splits are verified 100% leakage-free across pattern groups.",
+  "duplicate_text_leakage": "0 (verified zero exact or normalized duplicate text overlap across splits)",
+  "unique_split_clusters": 5159
+}

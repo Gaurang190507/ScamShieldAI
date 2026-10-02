@@ -1,0 +1,12 @@
+{
+  "document_id": "doc_cert_in_mobile_threats",
+  "title": "CERT-In Advisory: Mobile Banking Trojans, Malicious APK Sideloading, and Smishing Campaigns",
+  "source": "Indian Computer Emergency Response Team (CERT-In), MeitY",
+  "source_type": "official_advisory",
+  "publication_date": "2023-11-20",
+  "retrieval_date": "2026-10-02",
+  "jurisdiction": "IN",
+  "topic": "mobile_threats_and_smishing",
+  "license_status": "reference_advisory_excerpt",
+  "content": "CERT-In security bulletins document aggressive smishing and malicious Android application campaigns targeting mobile banking users. Major threat vectors include:\n\n1. Smishing (SMS Phishing) Characteristics:\nAdversaries distribute bulk SMS messages containing shortened or spoofed URLs pretending to be from telecom service providers, banks, or state electricity boards. Common pretexts include: 'Electricity will be disconnected tonight due to unpaid bill', 'SIM card deactivation pending KYC update', or 'PAN card not linked with bank account'. Messages uniformly employ artificial urgency, threatening immediate service disruption within hours to bypass critical evaluation.\n\n2. Malicious APK Sideloading:\nPhishing links often prompt users to download and install third-party Android application packages (.apk files) disguised as official customer support utilities (e.g., 'SBI_Rewards.apk', 'QuickSupport.apk', 'ElectricityBillUpdate.apk'). Once installed, these trojans request Accessibility Services, SMS read/write permissions, and overlay permissions. They intercept incoming One-Time Passwords (OTPs) and exfiltrate credentials without the victim's awareness.\n\n3. Countermeasures & Technical Indicators:\nCitizens are advised never to sideload APKs from untrusted web links or messaging chats. Official organizations never send direct APK download links over SMS. Lookalike domain names often utilize suspicious top-level domains (.top, .xyz, .site, .info) or misspellings of legitimate institutional domains."
+}

@@ -1,0 +1,47 @@
+{
+  "fixture_01_scam.png": {
+    "filename": "fixture_01_scam.png",
+    "filepath": "C:\\Users\\radika\\OneDrive\\Desktop\\ScamShieldAI\\tests\\fixtures\\images\\fixture_01_scam.png",
+    "ground_truth_text": "URGENT!\nYour bank account will be suspended today.\nVerify immediately:\nhttps://example.com/verify",
+    "label": "scam",
+    "description": "Scam-like screenshot with urgency and URL.",
+    "width": 600,
+    "height": 300
+  },
+  "fixture_02_legitimate.png": {
+    "filename": "fixture_02_legitimate.png",
+    "filepath": "C:\\Users\\radika\\OneDrive\\Desktop\\ScamShieldAI\\tests\\fixtures\\images\\fixture_02_legitimate.png",
+    "ground_truth_text": "Your order has been shipped.\nExpected delivery: tomorrow.",
+    "label": "non_scam",
+    "description": "Legitimate shipping notification.",
+    "width": 500,
+    "height": 200
+  },
+  "fixture_03_payment.png": {
+    "filename": "fixture_03_payment.png",
+    "filepath": "C:\\Users\\radika\\OneDrive\\Desktop\\ScamShieldAI\\tests\\fixtures\\images\\fixture_03_payment.png",
+    "ground_truth_text": "Congratulations!\nYou won \u20b950,000.\nPay \u20b9500 processing fee to claim your reward.",
+    "label": "scam",
+    "description": "Advance fee payment request with currency.",
+    "width": 600,
+    "height": 250
+  },
+  "fixture_04_blank.png": {
+    "filename": "fixture_04_blank.png",
+    "filepath": "C:\\Users\\radika\\OneDrive\\Desktop\\ScamShieldAI\\tests\\fixtures\\images\\fixture_04_blank.png",
+    "ground_truth_text": "",
+    "label": "blank",
+    "description": "Blank image containing zero text.",
+    "width": 400,
+    "height": 200
+  },
+  "fixture_05_edge_case.png": {
+    "filename": "fixture_05_edge_case.png",
+    "filepath": "C:\\Users\\radika\\OneDrive\\Desktop\\ScamShieldAI\\tests\\fixtures\\images\\fixture_05_edge_case.png",
+    "ground_truth_text": "Do not share your OTP 482910 with anyone.\nSupport: help@bank-service.com\nCharges: \u20b925.00\nHelpline: +91-9876543210\nPortal: https://secure.bank.com/auth",
+    "label": "edge_case",
+    "description": "Edge case containing symbols, OTP, email, URL, phone, and currency.",
+    "width": 650,
+    "height": 350
+  }
+}

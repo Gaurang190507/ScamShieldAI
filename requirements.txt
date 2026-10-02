@@ -1,0 +1,28 @@
+# Core Data Structures & Processing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Regular Expressions & Parsing
+regex>=2023.8.8
+
+# Machine Learning & Serialization
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# Semantic Embeddings & Similarity (Phase 7)
+torch>=2.2.0
+sentence-transformers>=3.0.0
+
+# Image & Visual Processing (Phase 9A, 9B)
+Pillow>=10.0.0
+pytesseract>=0.3.10
+
+# User Interface & Application (Phase 11, 14)
+streamlit>=1.28.0
+
+# System Telemetry & Resource Monitoring (Phase 14)
+psutil>=5.9.0
+
+# Testing & Quality
+pytest>=7.4.0
+

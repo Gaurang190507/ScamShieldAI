@@ -1,0 +1,9 @@
+{
+  "model_type": "hybrid_fusion_logistic_regression",
+  "include_tactics": true,
+  "include_urls": true,
+  "num_text_features": 7775,
+  "num_aux_features": 40,
+  "threshold": 0.5,
+  "num_samples_trained": 55
+}

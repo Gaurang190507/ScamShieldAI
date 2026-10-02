@@ -1,0 +1,11 @@
+{
+  "model_type": "char_ngram_tfidf_logistic_regression",
+  "ngram_range": [
+    3,
+    5
+  ],
+  "max_features": 15000,
+  "vocabulary_size": 7775,
+  "threshold": 0.55,
+  "num_samples_trained": 55
+}
