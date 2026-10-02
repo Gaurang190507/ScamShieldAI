@@ -147,9 +147,14 @@ python src/app/health.py
 
 ---
 
-## 🖥️ Running the Application
+## 🌐 Live Demo
 
-Launch the unified production console:
+- **Streamlit Community Cloud 1-Click Deployment:** [Deploy ScamShield AI on Streamlit Cloud](https://share.streamlit.io/deploy?repository=Gaurang190507/ScamShieldAI&branch=main&mainModule=app.py)
+- **Live Cloud URL:** [https://scamshield-ai.streamlit.app](https://scamshield-ai.streamlit.app) (or your workspace-assigned Streamlit URL)
+
+## 🖥️ Run Locally
+
+Launch the unified production console locally:
 
 ```bash
 streamlit run app.py
