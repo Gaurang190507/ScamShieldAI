@@ -633,36 +633,6 @@ class InvestigationService:
 
             timings["total_ms"] = (time.perf_counter() - t_total_start) * 1000
 
-            # Build unified signals dictionary for UI and report consumers
-            report_signals = dict(signals) if isinstance(signals, dict) else {}
-            if "classifier_probability" not in report_signals:
-                p_val = (
-                    signals.get("text_classifier", {}).get("probability")
-                    if isinstance(signals.get("text_classifier"), dict)
-                    else None
-                )
-                if p_val is None and isinstance(signals.get("baseline_classifier"), dict):
-                    p_val = signals.get("baseline_classifier", {}).get("probability")
-                report_signals["classifier_probability"] = p_val
-            if "url_risk_score" not in report_signals:
-                u_val = (
-                    signals.get("url_analysis", {}).get("max_risk_score")
-                    if isinstance(signals.get("url_analysis"), dict)
-                    else None
-                )
-                if u_val is None and isinstance(signals.get("url_analysis"), dict):
-                    u_val = signals.get("url_analysis", {}).get("risk_score_max")
-                report_signals["url_risk_score"] = u_val if u_val is not None else 0.0
-            if "semantic_novelty_score" not in report_signals:
-                nov_val = (
-                    signals.get("semantic_similarity", {}).get("novelty_score")
-                    if isinstance(signals.get("semantic_similarity"), dict)
-                    else None
-                )
-                if nov_val is None:
-                    nov_val = semantic_context.get("novelty_score") or semantic_context.get("semantic_novelty_score")
-                report_signals["semantic_novelty_score"] = nov_val
-
             log_pipeline_event(
                 "investigation_completed",
                 cid,
@@ -677,7 +647,6 @@ class InvestigationService:
                 input_type=input_type,
                 timestamp=timestamp,
                 assessment=case_result.assessment.to_dict(),
-                signals=report_signals,
                 detected_tactics=detected_tactics,
                 tactic_spans=tactic_spans,
                 evidence_by_source=evidence_by_source,

@@ -44,7 +44,6 @@ class InvestigationReport:
     input_type: str  # "text_only", "url_only", "image_only", "text_and_url", "text_and_image", "url_and_image", "combined_all", "empty"
     timestamp: str
     assessment: Dict[str, Any]  # status, evidence_level, signal_consistency
-    signals: Dict[str, Any] = field(default_factory=dict)
     detected_tactics: List[str] = field(default_factory=list)
     tactic_spans: List[Dict[str, Any]] = field(default_factory=list)
     evidence_by_source: Dict[str, List[Dict[str, Any]]] = field(default_factory=dict)

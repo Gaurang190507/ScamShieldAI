@@ -4,7 +4,7 @@
     "name": "Benign message",
     "verdict": "likely_non_scam",
     "evidence_level": "low",
-    "latency_ms": 130.5,
+    "latency_ms": 189.7,
     "passed": true
   },
   {

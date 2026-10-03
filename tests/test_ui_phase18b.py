@@ -22,11 +22,15 @@ import app
 from src.app.schemas import InvestigationInput, InvestigationReport
 from src.app.service import InvestigationService
 from src.app.streamlit_app import (
+    extract_report_signals,
     get_investigation_service,
     init_session_state,
     record_case_history,
+    render_history_panel,
     render_risk_signals,
     render_similarity_novelty,
+    render_tactics_panel,
+    render_verdict_card,
 )
 from src.ocr.environment import OCREnvironmentDetector
 
@@ -181,32 +185,114 @@ class TestPhase18BStreamlitUI(unittest.TestCase):
     @patch("streamlit.markdown")
     @patch("streamlit.warning")
     @patch("streamlit.info")
-    def test_render_risk_signals_and_novelty_safety(
+    def test_reproduce_production_attribute_error_and_verify_fix(
         self, mock_info, mock_warn, mock_md, mock_succ, mock_err, mock_cols, mock_sub
     ):
-        """Verify render_risk_signals and render_similarity_novelty execute safely without AttributeError."""
+        """Reproduce exact production bug and verify the UI-only extraction fix."""
         mock_cols.side_effect = lambda n: [MagicMock() for _ in range(n if isinstance(n, int) else len(n))]
 
-        # 1. Test on live report with signals
         inp = InvestigationInput(
-            text="URGENT: Electricity will be disconnected tonight. Pay immediately at bit.ly/power-bill",
+            text="URGENT: Electricity will be disconnected tonight. Pay immediately at http://bit.ly/power-bill",
+            url="http://bit.ly/power-bill",
         )
         report = self.service.investigate(inp)
-        self.assertIsInstance(report.signals, dict)
-        self.assertIn("classifier_probability", report.signals)
+
+        # 1. Exact reproduction: accessing report.signals directly causes AttributeError
+        with self.assertRaises(AttributeError):
+            _ = report.signals.get("classifier_probability")
+
+        # 2. Verify extract_report_signals correctly extracts existing signals from native fields
+        extracted = extract_report_signals(report)
+        self.assertIsNotNone(extracted["classifier_probability"])
+        self.assertIsInstance(extracted["classifier_probability"], float)
+        self.assertGreaterEqual(extracted["classifier_probability"], 0.0)
+        self.assertLessEqual(extracted["classifier_probability"], 1.0)
+        self.assertIsNotNone(extracted["url_risk_score"])
+        self.assertIsInstance(extracted["url_risk_score"], float)
+        self.assertIsNotNone(extracted["tactics"])
+        self.assertIn("urgency", extracted["tactics"])
+
+        # 3. Verify render_risk_signals & render_similarity_novelty execute safely
         render_risk_signals(report)
         render_similarity_novelty(report)
 
-        # 2. Test on mock report with empty signals
+        # 4. Verify missing signals display N/A without crashing
         mock_report = InvestigationReport(
-            case_id="case_test_signals",
+            case_id="case_missing_signals",
             input_type="text_only",
             timestamp="2026-10-03T00:00:00Z",
-            assessment={"status": "likely_scam", "evidence_level": "high"},
-            signals={},
+            assessment={"status": "insufficient_evidence", "evidence_level": "low"},
         )
+        extracted_missing = extract_report_signals(mock_report)
+        self.assertIsNone(extracted_missing["classifier_probability"])
+        self.assertIsNone(extracted_missing["url_risk_score"])
         render_risk_signals(mock_report)
         render_similarity_novelty(mock_report)
+
+        # 5. Verify non-dict signals object without .get() is handled safely
+        class CustomSignals:
+            classifier_probability = 0.85
+            url_risk_score = 0.55
+            tactics = ["urgency", "impersonation"]
+            semantic_novelty_score = 0.12
+
+        mock_obj_report = MagicMock()
+        mock_obj_report.signals = CustomSignals()
+        mock_obj_report.url_findings = []
+        mock_obj_report.evidence_by_source = {}
+        mock_obj_report.detected_tactics = ["urgency"]
+        mock_obj_report.semantic_context = {}
+        extracted_obj = extract_report_signals(mock_obj_report)
+        self.assertEqual(extracted_obj["classifier_probability"], 0.85)
+        self.assertEqual(extracted_obj["url_risk_score"], 0.55)
+        render_risk_signals(mock_obj_report)
+
+    @patch("streamlit.subheader")
+    @patch("streamlit.columns")
+    @patch("streamlit.error")
+    @patch("streamlit.success")
+    @patch("streamlit.markdown")
+    @patch("streamlit.warning")
+    @patch("streamlit.info")
+    @patch("streamlit.caption")
+    @patch("streamlit.dataframe")
+    def test_all_four_ui_workflows_rendering(
+        self, mock_df, mock_cap, mock_info, mock_warn, mock_md, mock_succ, mock_err, mock_cols, mock_sub
+    ):
+        """Verify rendering across Quick Scan, Deep Investigation, Screenshot Scan, and Case History."""
+        mock_cols.side_effect = lambda n: [MagicMock() for _ in range(n if isinstance(n, int) else len(n))]
+
+        # Generate a live investigation report
+        inp = InvestigationInput(
+            text="URGENT: Bank account suspended. Verify at bit.ly/bank-auth",
+        )
+        report = self.service.investigate(inp)
+
+        # 1. Quick Scan rendering components
+        render_verdict_card(report, mode="quick")
+        render_risk_signals(report)
+
+        # 2. Deep Investigation rendering components
+        render_verdict_card(report, mode="deep")
+        render_risk_signals(report)
+        render_tactics_panel(report)
+        render_similarity_novelty(report)
+
+        # 3. Screenshot Scan rendering components (image modality)
+        mock_image_report = InvestigationReport(
+            case_id="case_screenshot_test",
+            input_type="image_only",
+            timestamp="2026-10-03T00:00:00Z",
+            assessment={"status": "likely_scam", "evidence_level": "high"},
+            ocr_text="Dear Customer, your electricity connection will be disconnected today.",
+        )
+        render_verdict_card(mock_image_report, mode="deep")
+        render_risk_signals(mock_image_report)
+
+        # 4. Case History workflow
+        record_case_history(report, preview_text="URGENT: Bank account suspended...")
+        render_history_panel()
+        self.assertGreaterEqual(len(st.session_state["investigation_history"]), 1)
 
 
 if __name__ == "__main__":

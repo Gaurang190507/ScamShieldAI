@@ -141,63 +141,152 @@ def render_verdict_card(report: InvestigationReport, mode: str = "deep") -> None
 # 5. COMPONENT: RISK SIGNALS MATRIX
 # =====================================================================
 
+def extract_report_signals(report: Any) -> Dict[str, Any]:
+    """Safely extracts key signals from an InvestigationReport or similar object.
+    
+    Guarantees no AttributeError whether .signals is absent, not a dict, or missing fields.
+    Normalizes:
+      - classifier_probability: Optional[float]
+      - url_risk_score: Optional[float]
+      - tactics: Optional[List[str]]
+      - semantic_novelty_score: Optional[float]
+    """
+    out: Dict[str, Any] = {
+        "classifier_probability": None,
+        "url_risk_score": None,
+        "tactics": None,
+        "semantic_novelty_score": None,
+    }
+    if report is None:
+        return out
+
+    # 1. Safely inspect report.signals if present (dict or object)
+    signals_val = getattr(report, "signals", None)
+    if isinstance(signals_val, dict):
+        out["classifier_probability"] = signals_val.get("classifier_probability")
+        if out["classifier_probability"] is None and isinstance(signals_val.get("text_classifier"), dict):
+            out["classifier_probability"] = signals_val["text_classifier"].get("probability")
+        if out["classifier_probability"] is None and isinstance(signals_val.get("baseline_classifier"), dict):
+            out["classifier_probability"] = signals_val["baseline_classifier"].get("probability")
+
+        out["url_risk_score"] = signals_val.get("url_risk_score")
+        if out["url_risk_score"] is None and isinstance(signals_val.get("url_analysis"), dict):
+            out["url_risk_score"] = signals_val["url_analysis"].get("max_risk_score") or signals_val["url_analysis"].get("risk_score_max")
+
+        if isinstance(signals_val.get("tactics"), dict):
+            out["tactics"] = signals_val["tactics"].get("detected")
+
+        out["semantic_novelty_score"] = signals_val.get("semantic_novelty_score")
+        if out["semantic_novelty_score"] is None and isinstance(signals_val.get("semantic_similarity"), dict):
+            out["semantic_novelty_score"] = signals_val["semantic_similarity"].get("novelty_score")
+    elif signals_val is not None:
+        out["classifier_probability"] = getattr(signals_val, "classifier_probability", None)
+        out["url_risk_score"] = getattr(signals_val, "url_risk_score", None)
+        out["tactics"] = getattr(signals_val, "tactics", None)
+        out["semantic_novelty_score"] = getattr(signals_val, "semantic_novelty_score", None)
+
+    # 2. Extract classifier probability from evidence if still None
+    if out["classifier_probability"] is None:
+        ev_by_source = getattr(report, "evidence_by_source", {})
+        if isinstance(ev_by_source, dict):
+            for item in ev_by_source.get("TEXT EVIDENCE", []):
+                if isinstance(item, dict) and item.get("name") == "scam_probability":
+                    out["classifier_probability"] = item.get("value")
+                    break
+
+    # 3. Extract URL risk score from findings/evidence if still None
+    if out["url_risk_score"] is None:
+        url_findings = getattr(report, "url_findings", [])
+        if isinstance(url_findings, list) and url_findings:
+            scores = [
+                f.get("value", 0.0) for f in url_findings
+                if isinstance(f, dict) and isinstance(f.get("value"), (int, float))
+            ]
+            if scores:
+                out["url_risk_score"] = max(scores)
+            else:
+                out["url_risk_score"] = 0.0
+        else:
+            ev_by_source = getattr(report, "evidence_by_source", {})
+            if isinstance(ev_by_source, dict) and ev_by_source.get("URL EVIDENCE"):
+                scores = [
+                    f.get("value", 0.0) for f in ev_by_source.get("URL EVIDENCE", [])
+                    if isinstance(f, dict) and isinstance(f.get("value"), (int, float))
+                ]
+                if scores:
+                    out["url_risk_score"] = max(scores)
+
+    # 4. Extract tactics if still None
+    if out["tactics"] is None:
+        tactics_val = getattr(report, "detected_tactics", None)
+        if isinstance(tactics_val, list):
+            out["tactics"] = tactics_val
+
+    # 5. Extract semantic novelty from context / evidence if still None
+    if out["semantic_novelty_score"] is None:
+        sem_ctx = getattr(report, "semantic_context", {})
+        if isinstance(sem_ctx, dict):
+            out["semantic_novelty_score"] = sem_ctx.get("novelty_score") or sem_ctx.get("semantic_novelty_score")
+        if out["semantic_novelty_score"] is None:
+            ev_by_source = getattr(report, "evidence_by_source", {})
+            if isinstance(ev_by_source, dict):
+                for item in ev_by_source.get("SEMANTIC EVIDENCE", []):
+                    if isinstance(item, dict) and item.get("name") == "semantic_novelty_score":
+                        out["semantic_novelty_score"] = item.get("value")
+                        break
+
+    return out
+
+
 def render_risk_signals(report: InvestigationReport) -> None:
     """Renders high-level overview of isolated risk signals."""
     st.subheader("📊 Key Risk Signals")
 
-    signals_data = getattr(report, "signals", {}) or {}
+    extracted = extract_report_signals(report)
     signals = []
 
-    # Classifier signal
-    clf_prob = signals_data.get("classifier_probability")
-    if clf_prob is None and isinstance(signals_data.get("text_classifier"), dict):
-        clf_prob = signals_data.get("text_classifier", {}).get("probability")
-    if clf_prob is None and isinstance(signals_data.get("baseline_classifier"), dict):
-        clf_prob = signals_data.get("baseline_classifier", {}).get("probability")
-    if clf_prob is None:
-        for item in report.evidence_by_source.get("TEXT EVIDENCE", []):
-            if item.get("name") == "scam_probability":
-                clf_prob = item.get("value")
-                break
-
+    # 1. Classifier signal
+    clf_prob = extracted.get("classifier_probability")
     if clf_prob is not None:
         if clf_prob >= 0.30:
             signals.append(("Text Classifier Signal", f"Scam probability score {clf_prob:.3f} exceeds threshold (0.30)", True))
         else:
             signals.append(("Text Classifier Signal", f"Score {clf_prob:.3f} below scam threshold", False))
+    else:
+        signals.append(("Text Classifier Signal", "Score: N/A (bypassed or unavailable)", False))
 
-    # URL signal
-    url_score = signals_data.get("url_risk_score")
-    if url_score is None and isinstance(signals_data.get("url_analysis"), dict):
-        url_score = signals_data.get("url_analysis", {}).get("max_risk_score") or signals_data.get("url_analysis", {}).get("risk_score_max")
-    if url_score is None:
-        if report.url_findings:
-            scores = [f.get("value", 0.0) for f in report.url_findings if isinstance(f.get("value"), (int, float))]
-            url_score = max(scores) if scores else 0.0
+    # 2. URL signal
+    url_score = extracted.get("url_risk_score")
+    if url_score is not None:
+        if url_score >= 0.40:
+            signals.append(("URL Structure Signal", f"Structural risk score {url_score:.2f} indicates elevated risk", True))
+        elif url_score > 0.0:
+            signals.append(("URL Structure Signal", f"Minor URL heuristic flags (score {url_score:.2f})", False))
+        elif getattr(report, "url_findings", None):
+            signals.append(("URL Structure Signal", "Score 0.00 (clean URL structure)", False))
         else:
-            url_score = 0.0
+            signals.append(("URL Structure Signal", "Score: N/A (no URLs analyzed)", False))
+    else:
+        signals.append(("URL Structure Signal", "Score: N/A (no URLs analyzed)", False))
 
-    if url_score >= 0.40:
-        signals.append(("URL Structure Signal", f"Structural risk score {url_score:.2f} indicates elevated risk", True))
-    elif url_score > 0.0:
-        signals.append(("URL Structure Signal", f"Minor URL heuristic flags (score {url_score:.2f})", False))
-
-    # Tactics signal
-    tactics = report.detected_tactics
+    # 3. Tactics signal
+    tactics = extracted.get("tactics")
     if tactics:
         signals.append(("Behavioral Tactics", f"{len(tactics)} manipulative tactics detected ({', '.join(tactics[:3])})", True))
-    else:
+    elif tactics is not None:
         signals.append(("Behavioral Tactics", "No coercive behavioral tactics detected", False))
+    else:
+        signals.append(("Behavioral Tactics", "Tactics: N/A", False))
 
-    # Semantic novelty signal
-    novelty = signals_data.get("semantic_novelty_score")
-    if novelty is None and isinstance(signals_data.get("semantic_similarity"), dict):
-        novelty = signals_data.get("semantic_similarity", {}).get("novelty_score")
-    if novelty is None:
-        novelty = report.semantic_context.get("novelty_score") or report.semantic_context.get("semantic_novelty_score")
-
-    if novelty is not None and novelty > 0.45:
-        signals.append(("Pattern Novelty", f"Elevated novelty score ({novelty:.3f}) relative to reference baseline", True))
+    # 4. Semantic novelty signal
+    novelty = extracted.get("semantic_novelty_score")
+    if novelty is not None:
+        if novelty > 0.45:
+            signals.append(("Pattern Novelty", f"Elevated novelty score ({novelty:.3f}) relative to reference baseline", True))
+        else:
+            signals.append(("Pattern Novelty", f"Recognized threat pattern (novelty score: {novelty:.3f})", False))
+    else:
+        signals.append(("Pattern Novelty", "Score: N/A (reference comparison unavailable)", False))
 
     cols = st.columns(len(signals) if signals else 1)
     for i, (name, desc, is_risk) in enumerate(signals):
@@ -294,12 +383,8 @@ def render_similarity_novelty(report: InvestigationReport) -> None:
 
     with col_nov:
         st.markdown("##### Emerging Threat Assessment")
-        signals_data = getattr(report, "signals", {}) or {}
-        novelty_score = signals_data.get("semantic_novelty_score")
-        if novelty_score is None and isinstance(signals_data.get("semantic_similarity"), dict):
-            novelty_score = signals_data.get("semantic_similarity", {}).get("novelty_score")
-        if novelty_score is None:
-            novelty_score = report.semantic_context.get("novelty_score") or report.semantic_context.get("semantic_novelty_score")
+        extracted = extract_report_signals(report)
+        novelty_score = extracted.get("semantic_novelty_score")
 
         if novelty_score is not None:
             if novelty_score > 0.45:
@@ -314,7 +399,7 @@ def render_similarity_novelty(report: InvestigationReport) -> None:
                     "Content closely matches recognized scam narratives in the reference memory bank."
                 )
         else:
-            st.info("Pattern novelty evaluation not applicable for this input.")
+            st.info("Pattern novelty evaluation not applicable for this input (N/A).")
 
 
 # =====================================================================
