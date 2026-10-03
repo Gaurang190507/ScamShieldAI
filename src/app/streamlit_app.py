@@ -145,9 +145,21 @@ def render_risk_signals(report: InvestigationReport) -> None:
     """Renders high-level overview of isolated risk signals."""
     st.subheader("📊 Key Risk Signals")
 
+    signals_data = getattr(report, "signals", {}) or {}
     signals = []
+
     # Classifier signal
-    clf_prob = report.signals.get("classifier_probability")
+    clf_prob = signals_data.get("classifier_probability")
+    if clf_prob is None and isinstance(signals_data.get("text_classifier"), dict):
+        clf_prob = signals_data.get("text_classifier", {}).get("probability")
+    if clf_prob is None and isinstance(signals_data.get("baseline_classifier"), dict):
+        clf_prob = signals_data.get("baseline_classifier", {}).get("probability")
+    if clf_prob is None:
+        for item in report.evidence_by_source.get("TEXT EVIDENCE", []):
+            if item.get("name") == "scam_probability":
+                clf_prob = item.get("value")
+                break
+
     if clf_prob is not None:
         if clf_prob >= 0.30:
             signals.append(("Text Classifier Signal", f"Scam probability score {clf_prob:.3f} exceeds threshold (0.30)", True))
@@ -155,7 +167,16 @@ def render_risk_signals(report: InvestigationReport) -> None:
             signals.append(("Text Classifier Signal", f"Score {clf_prob:.3f} below scam threshold", False))
 
     # URL signal
-    url_score = report.signals.get("url_risk_score", 0.0)
+    url_score = signals_data.get("url_risk_score")
+    if url_score is None and isinstance(signals_data.get("url_analysis"), dict):
+        url_score = signals_data.get("url_analysis", {}).get("max_risk_score") or signals_data.get("url_analysis", {}).get("risk_score_max")
+    if url_score is None:
+        if report.url_findings:
+            scores = [f.get("value", 0.0) for f in report.url_findings if isinstance(f.get("value"), (int, float))]
+            url_score = max(scores) if scores else 0.0
+        else:
+            url_score = 0.0
+
     if url_score >= 0.40:
         signals.append(("URL Structure Signal", f"Structural risk score {url_score:.2f} indicates elevated risk", True))
     elif url_score > 0.0:
@@ -169,7 +190,12 @@ def render_risk_signals(report: InvestigationReport) -> None:
         signals.append(("Behavioral Tactics", "No coercive behavioral tactics detected", False))
 
     # Semantic novelty signal
-    novelty = report.signals.get("semantic_novelty_score")
+    novelty = signals_data.get("semantic_novelty_score")
+    if novelty is None and isinstance(signals_data.get("semantic_similarity"), dict):
+        novelty = signals_data.get("semantic_similarity", {}).get("novelty_score")
+    if novelty is None:
+        novelty = report.semantic_context.get("novelty_score") or report.semantic_context.get("semantic_novelty_score")
+
     if novelty is not None and novelty > 0.45:
         signals.append(("Pattern Novelty", f"Elevated novelty score ({novelty:.3f}) relative to reference baseline", True))
 
@@ -268,7 +294,13 @@ def render_similarity_novelty(report: InvestigationReport) -> None:
 
     with col_nov:
         st.markdown("##### Emerging Threat Assessment")
-        novelty_score = report.signals.get("semantic_novelty_score")
+        signals_data = getattr(report, "signals", {}) or {}
+        novelty_score = signals_data.get("semantic_novelty_score")
+        if novelty_score is None and isinstance(signals_data.get("semantic_similarity"), dict):
+            novelty_score = signals_data.get("semantic_similarity", {}).get("novelty_score")
+        if novelty_score is None:
+            novelty_score = report.semantic_context.get("novelty_score") or report.semantic_context.get("semantic_novelty_score")
+
         if novelty_score is not None:
             if novelty_score > 0.45:
                 st.warning(

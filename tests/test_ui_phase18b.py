@@ -25,6 +25,8 @@ from src.app.streamlit_app import (
     get_investigation_service,
     init_session_state,
     record_case_history,
+    render_risk_signals,
+    render_similarity_novelty,
 )
 from src.ocr.environment import OCREnvironmentDetector
 
@@ -171,6 +173,40 @@ class TestPhase18BStreamlitUI(unittest.TestCase):
         report = self.service.investigate(inp)
         self.assertIsInstance(report, InvestigationReport)
         self.assertIn(report.assessment["status"], ["insufficient_evidence", "benign"])
+
+    @patch("streamlit.subheader")
+    @patch("streamlit.columns")
+    @patch("streamlit.error")
+    @patch("streamlit.success")
+    @patch("streamlit.markdown")
+    @patch("streamlit.warning")
+    @patch("streamlit.info")
+    def test_render_risk_signals_and_novelty_safety(
+        self, mock_info, mock_warn, mock_md, mock_succ, mock_err, mock_cols, mock_sub
+    ):
+        """Verify render_risk_signals and render_similarity_novelty execute safely without AttributeError."""
+        mock_cols.side_effect = lambda n: [MagicMock() for _ in range(n if isinstance(n, int) else len(n))]
+
+        # 1. Test on live report with signals
+        inp = InvestigationInput(
+            text="URGENT: Electricity will be disconnected tonight. Pay immediately at bit.ly/power-bill",
+        )
+        report = self.service.investigate(inp)
+        self.assertIsInstance(report.signals, dict)
+        self.assertIn("classifier_probability", report.signals)
+        render_risk_signals(report)
+        render_similarity_novelty(report)
+
+        # 2. Test on mock report with empty signals
+        mock_report = InvestigationReport(
+            case_id="case_test_signals",
+            input_type="text_only",
+            timestamp="2026-10-03T00:00:00Z",
+            assessment={"status": "likely_scam", "evidence_level": "high"},
+            signals={},
+        )
+        render_risk_signals(mock_report)
+        render_similarity_novelty(mock_report)
 
 
 if __name__ == "__main__":
