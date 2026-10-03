@@ -243,6 +243,19 @@ def render_risk_signals(report: InvestigationReport) -> None:
     st.subheader("📊 Key Risk Signals")
 
     extracted = extract_report_signals(report)
+
+    # Safe diagnostic telemetry (Step 7)
+    with st.expander("🔍 Signals Diagnostic Telemetry", expanded=False):
+        st.write({
+            "type(report)": str(type(report)),
+            "type(report.signals)": str(type(getattr(report, "signals", None))) if hasattr(report, "signals") else "AttributeError: 'InvestigationReport' object has no attribute 'signals'",
+            "available_signal_field_names": [
+                f for f in ["evidence_by_source", "url_findings", "detected_tactics", "semantic_context", "assessment", "signals"]
+                if hasattr(report, f)
+            ],
+            "extracted_signal_keys": list(extracted.keys()),
+        })
+
     signals = []
 
     # 1. Classifier signal
